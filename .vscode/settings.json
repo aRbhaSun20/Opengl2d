@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "*.py": "python",
+        "*.jsx": "javascriptreact",
+        "exception": "cpp"
+    }
+}
