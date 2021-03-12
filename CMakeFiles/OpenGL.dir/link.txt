@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/OpenGL.dir/source/index.cpp.o CMakeFiles/OpenGL.dir/source/helperFunction.cpp.o  -o OpenGL  libraries/glfw/src/libglfw3.a libglad.a -ldl -lpthread -lrt -lm -ldl 

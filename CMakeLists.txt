@@ -5,7 +5,8 @@ project(OpenGL)
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/source")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries")
-set(SOURCES "${SRC_DIR}/index.cpp" "${SRC_DIR}/index.h" "${SRC_DIR}/log.cpp")
+set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp")
+set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
 
 # Executable definition and properties
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -29,12 +30,3 @@ add_library("glad" "${GLAD_DIR}/src/glad.c")
 target_include_directories("glad" PRIVATE "${GLAD_DIR}/include")
 target_include_directories(${PROJECT_NAME} PRIVATE "${GLAD_DIR}/include")
 target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
-
-#glew
-# set(GLEW_DIR "${LIB_DIR}/GLEW")
-# # add_subdirectory("${GLEW_DIR}")
-# target_link_libraries(${PROJECT_NAME} "${GLEW_LIBRARIES}")
-# target_include_directories(${PROJECT_NAME} PRIVATE "${GLEW_DIR}/include/GL")
-# link_directories("${GLEW_DIR}/include/extern/GLEW/lib")
-# target_compile_definitions(${PROJECT_NAME} PRIVATE "GLEW_INCLUDE_NONE")
-

@@ -3,6 +3,8 @@
         "*.html": "html",
         "*.py": "python",
         "*.jsx": "javascriptreact",
-        "exception": "cpp"
+        "exception": "cpp",
+        "iostream": "cpp",
+        "sstream": "cpp"
     }
 }
