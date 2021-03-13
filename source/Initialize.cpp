@@ -5,7 +5,7 @@ void Log(const char *message)
     std::cout << message << std::endl;
 }
 
-helperFunction ::helperFunction(int height, int width, const char *title)
+Initialize ::Initialize(int height, int width, const char *title)
 {
     windowHeight = width;
     windowWidth = height;
@@ -28,7 +28,7 @@ helperFunction ::helperFunction(int height, int width, const char *title)
     }
 }
 
-void helperFunction ::Gladinitialization()
+void Initialize ::Gladinitialization()
 {
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))

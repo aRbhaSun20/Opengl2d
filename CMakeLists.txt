@@ -5,7 +5,11 @@ project(OpenGL)
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/source")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries")
-set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp")
+# Shader Contents
+set(SHADER_DIR "${SRC_DIR}/Shaders")
+set(SHADER_FILES "${SHADER_DIR}/ShaderInitialize.h" "${SHADER_DIR}/ShaderInitialize.cpp")
+# Application files
+set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" "${SHADER_FILES}" )
 set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
 
 # Executable definition and properties

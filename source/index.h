@@ -4,16 +4,20 @@
 #include <iostream>
 #include <string>
 
+#include "Shaders/ShaderInitialize.h"
+
 void Log(const char *message);
 
-class helperFunction
+class Initialize
 {
 private:
     int windowWidth, windowHeight;
 
 public:
     GLFWwindow *window;
-    helperFunction(int height, int width, const char *title);
+    Initialize(int height, int width, const char *title);
 
     void Gladinitialization();
 };
+
+

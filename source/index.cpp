@@ -1,16 +1,7 @@
 #include <stdio.h>
 #include "index.h"
 
-#include <fstream>
-#include <sstream>
-
-struct ShaderProgramSource
-{
-   std::string VertexSource;
-   std::string FragmentSource;
-};
-
-static ShaderProgramSource ParseShader(const std::string &filepath)
+ShaderProgramSource ParseShader(const std::string &filepath)
 {
    std::ifstream stream(filepath);
 
@@ -68,7 +59,7 @@ void processInput(GLFWwindow *window)
       glfwSetWindowShouldClose(window, true);
 }
 
-static int CompileShader(unsigned int type, const std::string &source)
+int CompileShader(unsigned int type, const std::string &source)
 {
    unsigned int id = glCreateShader(type);
    const char *src = source.c_str();
@@ -94,7 +85,7 @@ static int CompileShader(unsigned int type, const std::string &source)
    return id;
 }
 
-static unsigned int CreateShader(const std::string &vertexShader, const std::string &fragmentShader)
+unsigned int CreateShader(const std::string &vertexShader, const std::string &fragmentShader)
 {
    unsigned int program = glCreateProgram();
    unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
@@ -115,7 +106,7 @@ int main(int argc, char *argv[])
    // initializations
    glfwSetErrorCallback(error_callback);
 
-   helperFunction hf(800, 800, "InitGL");
+   Initialize hf(800, 800, "InitGL");
 
    glfwSetKeyCallback(hf.window, key_callback);
 
@@ -127,48 +118,50 @@ int main(int argc, char *argv[])
 
    // start the declarations from here
 
-   // // vertex shader
-   // const char *vertexShaderSource = "#version 330 core\n"
-   //                                  "layout (location = 0) in vec3 aPos;\n"
-   //                                  "void main()\n"
-   //                                  "{\n"
-   //                                  "  gl_Position = vec4(aPos.x,aPos.y,aPos.z,1.0);\n"
-   //                                  "}\0";
-
-   // // fragment shader
-   // const char *fragmentShaderSource = "#version 330 core\n"
-   //                                    "out vec4 FragColor;\n"
-   //                                    "void main()\n"
-   //                                    "{\n"
-   //                                    "   FragColor = vec4(1.0f,0.5f,0.2f,1.0f);\n"
-   //                                    "}\n\0";
-
-   ShaderProgramSource source = ParseShader("../source/Shaders/Basic.shader");
-
-   int shaderProgram = CreateShader(source.VertexSource, source.FragmentSource);
-   glUseProgram(shaderProgram);
-
-   float vertices[9] = {
+   // vertices of a geometrical diagram
+   float vertices[18] = {
        -0.5f, -0.5f, 0.0f,
        0.5f, -0.5f, 0.0f,
-       0.0f, 0.5f, 0.0f};
+       0.5f, 0.5f, 0.0f,
+       -0.5f, 0.5f, 0.0f
+   };
 
-   unsigned int buffer, vertexArray;
-   glGenVertexArrays(1, &vertexArray);
+   unsigned int indices[6] = {
+       0, 1, 2,
+       2, 3, 0
+   };
+
+   // buffer normal
+   unsigned int buffer;
    glGenBuffers(1, &buffer);
-
-   glBindVertexArray(vertexArray);
-
    glBindBuffer(GL_ARRAY_BUFFER, buffer);
    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
    glEnableVertexAttribArray(0);
+   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
 
-   glBindBuffer(GL_ARRAY_BUFFER, 0);
-   glBindVertexArray(vertexArray);
+   // index buffer object
+   unsigned int ibo;
+   glGenBuffers(1, &ibo);
+   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
+   glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
+   // shader program initiation
+   // ShaderInitialize newShader("../source/Shaders/Basic.shader");
+   ShaderProgramSource source = ParseShader("../source/Shaders/Basic.shader");
+
+   // int shaderProgram = newShader.CreateShader();
+   int shaderProgram = CreateShader(source.VertexSource, source.FragmentSource);
+   glUseProgram(shaderProgram);
+
+   // Uniforms
+   int location = glGetUniformLocation(shaderProgram, "u_Color");
+   glUniform4f(location, 1.0, 0.5, 0.9, 1.0);
+
+   // background color
    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+   float r = 0.0,increment = 0.01;
 
    while (!glfwWindowShouldClose(hf.window))
    {
@@ -181,13 +174,22 @@ int main(int argc, char *argv[])
       glClear(GL_COLOR_BUFFER_BIT);
 
       // draw triangle
-      glDrawArrays(GL_TRIANGLES, 0, 3);
+      glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+      // declare the uniforms parameters
+      glUniform4f(location, r, 0.5, 0.9, 1.0);
+   
+   // color change animations
+      if(r > 1.0)
+         increment = -0.01;
+      else if (r < 0.0)
+         increment = 0.01;
+
+      r += increment;
 
       glfwSwapBuffers(hf.window);
       glfwPollEvents();
    }
 
-   glDeleteVertexArrays(1, &vertexArray);
    glDeleteBuffers(1, &buffer);
    glDeleteProgram(shaderProgram);
 
