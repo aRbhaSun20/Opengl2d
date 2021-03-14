@@ -4,9 +4,16 @@
 #include <iostream>
 #include <string>
 
-#include "Shaders/ShaderInitialize.h"
+#include "./VertexBuffers/VertexBuffer.h"
+#include "./IndexBuffers/IndexBuffer.h"
+// #include "VertexArray.h"
 
-void Log(const char *message);
+#include "./Shaders/ShaderInitialize.h"
+
+template <typename T>
+void Log(T value){
+    std::cout << value << std::endl;
+}
 
 class Initialize
 {

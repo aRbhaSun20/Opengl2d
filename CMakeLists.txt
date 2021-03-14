@@ -5,11 +5,29 @@ project(OpenGL)
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/source")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries")
+
+# Vetex Buffer
+set(VERTEX_DIR "${SRC_DIR}/VertexBuffers")
+set(VERTEX_BUFFER "${VERTEX_DIR}/VertexBuffer.h" 
+    "${VERTEX_DIR}/VertexBuffer.cpp") 
+
+#Index Buffer
+set(INDEX_DIR "${SRC_DIR}/IndexBuffers")
+set(INDEX_BUFFER  "${INDEX_DIR}/IndexBuffer.h" 
+    "${INDEX_DIR}/IndexBuffer.cpp")
+
+# Vertex Array and Vertex Buffer Layout
+#set(VERTEX_ARRAY_LAYOUT "${SRC_DIR}/VertexBufferLayout.h"
+#     "${SRC_DIR}/VertexArray.h" "${SRC_DIR}/VertexArray.cpp" )
+
 # Shader Contents
 set(SHADER_DIR "${SRC_DIR}/Shaders")
-set(SHADER_FILES "${SHADER_DIR}/ShaderInitialize.h" "${SHADER_DIR}/ShaderInitialize.cpp")
-# Application files
-set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" "${SHADER_FILES}" )
+set(SHADER_FILES "${SHADER_DIR}/ShaderInitialize.h" 
+    "${SHADER_DIR}/ShaderInitialize.cpp")
+
+# Application files "${VERTEX_ARRAY_LAYOUT}"
+set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
+        "${VERTEX_BUFFER}" "${INDEX_BUFFER}""${SHADER_FILES}" )
 set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
 
 # Executable definition and properties

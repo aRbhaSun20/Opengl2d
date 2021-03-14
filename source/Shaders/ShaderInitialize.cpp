@@ -1,6 +1,18 @@
 #include "ShaderInitialize.h"
 
 ShaderInitialize::ShaderInitialize(const std::string &filepath)
+    : m_RendererID(0)
+{
+    ShaderProgramSource source = ParseShader(filepath);
+    m_RendererID = CreateShader(source.VertexSource, source.FragmentSource);
+}
+
+ShaderInitialize::~ShaderInitialize()
+{
+    glDeleteProgram(m_RendererID);
+}
+
+ShaderProgramSource ShaderInitialize::ParseShader(const std::string &filepath)
 {
     std::ifstream stream(filepath);
 
@@ -33,11 +45,10 @@ ShaderInitialize::ShaderInitialize(const std::string &filepath)
             ss[(int)type] << line << '\n';
         }
     }
-    std::cout << ss[0].str() << std::endl;
-    // return {ss[0].str(), ss[1].str()};
+    return {ss[0].str(), ss[1].str()};
 }
 
-int ShaderInitialize::CompileShader(unsigned int type, const std::string &source)
+unsigned int ShaderInitialize::CompileShader(unsigned int type, const std::string &source)
 {
     unsigned int id = glCreateShader(type);
     const char *src = source.c_str();
@@ -59,15 +70,14 @@ int ShaderInitialize::CompileShader(unsigned int type, const std::string &source
         glDeleteShader(id);
         return 0;
     }
-
     return id;
 }
 
-unsigned int ShaderInitialize::CreateShader()
+unsigned int ShaderInitialize::CreateShader(const std::string &vertexShader, const std::string &fragmentShader)
 {
     unsigned int program = glCreateProgram();
-    unsigned int vs = CompileShader(GL_VERTEX_SHADER, ss[0].str());
-    unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, ss[1].str());
+    unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
+    unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
 
     glAttachShader(program, vs);
     glAttachShader(program, fs);
@@ -77,4 +87,33 @@ unsigned int ShaderInitialize::CreateShader()
     glDeleteShader(vs);
     glDeleteShader(fs);
     return program;
+}
+
+void ShaderInitialize::Bind() const
+{
+    glUseProgram(m_RendererID);
+}
+
+void ShaderInitialize::Unbind() const
+{
+    glUseProgram(0);
+}
+
+void ShaderInitialize::SetUniform4f(const std::string &name, float v0, float v1, float v2, float v3)
+{
+    glUniform4f(GetUniformLocation(name), v0, v1, v2, v3);
+}
+
+unsigned int ShaderInitialize::GetUniformLocation(const std::string &name)
+{
+
+    if (m_Uniform_locationCache.find(name) != m_Uniform_locationCache.end())
+        return m_Uniform_locationCache[name];
+
+    int location = glGetUniformLocation(m_RendererID, name.c_str());
+    if (location == -1)
+        std::cout << "Warning: uniform" << name << " doesn't exist!" << std::endl;
+
+    m_Uniform_locationCache[name] = location;
+    return location;
 }

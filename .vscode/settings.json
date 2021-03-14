@@ -5,6 +5,11 @@
         "*.jsx": "javascriptreact",
         "exception": "cpp",
         "iostream": "cpp",
-        "sstream": "cpp"
-    }
+        "sstream": "cpp",
+        "deque": "c",
+        "string": "c",
+        "vector": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cmake.configureOnOpen": false
 }

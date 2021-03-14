@@ -1,9 +1,9 @@
 #include "index.h"
 
-void Log(const char *message)
-{
-    std::cout << message << std::endl;
-}
+// void Log(const char *message)
+// {
+//     std::cout << message << std::endl;
+// }
 
 Initialize ::Initialize(int height, int width, const char *title)
 {
