@@ -176,32 +176,32 @@ libraries/glad/src/glad.c.s:
 	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/libraries/glad/src/glad.c.s
 .PHONY : libraries/glad/src/glad.c.s
 
-source/IndexBuffer.o: source/IndexBuffer.cpp.o
+source/IndexBuffers/IndexBuffer.o: source/IndexBuffers/IndexBuffer.cpp.o
 
-.PHONY : source/IndexBuffer.o
+.PHONY : source/IndexBuffers/IndexBuffer.o
 
 # target to build an object file
-source/IndexBuffer.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/IndexBuffer.cpp.o
-.PHONY : source/IndexBuffer.cpp.o
+source/IndexBuffers/IndexBuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o
+.PHONY : source/IndexBuffers/IndexBuffer.cpp.o
 
-source/IndexBuffer.i: source/IndexBuffer.cpp.i
+source/IndexBuffers/IndexBuffer.i: source/IndexBuffers/IndexBuffer.cpp.i
 
-.PHONY : source/IndexBuffer.i
+.PHONY : source/IndexBuffers/IndexBuffer.i
 
 # target to preprocess a source file
-source/IndexBuffer.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/IndexBuffer.cpp.i
-.PHONY : source/IndexBuffer.cpp.i
+source/IndexBuffers/IndexBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.i
+.PHONY : source/IndexBuffers/IndexBuffer.cpp.i
 
-source/IndexBuffer.s: source/IndexBuffer.cpp.s
+source/IndexBuffers/IndexBuffer.s: source/IndexBuffers/IndexBuffer.cpp.s
 
-.PHONY : source/IndexBuffer.s
+.PHONY : source/IndexBuffers/IndexBuffer.s
 
 # target to generate assembly for a file
-source/IndexBuffer.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/IndexBuffer.cpp.s
-.PHONY : source/IndexBuffer.cpp.s
+source/IndexBuffers/IndexBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.s
+.PHONY : source/IndexBuffers/IndexBuffer.cpp.s
 
 source/Initialize.o: source/Initialize.cpp.o
 
@@ -230,59 +230,59 @@ source/Initialize.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initialize.cpp.s
 .PHONY : source/Initialize.cpp.s
 
-source/VertexArray.o: source/VertexArray.cpp.o
+source/Shaders/ShaderInitialize.o: source/Shaders/ShaderInitialize.cpp.o
 
-.PHONY : source/VertexArray.o
-
-# target to build an object file
-source/VertexArray.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o
-.PHONY : source/VertexArray.cpp.o
-
-source/VertexArray.i: source/VertexArray.cpp.i
-
-.PHONY : source/VertexArray.i
-
-# target to preprocess a source file
-source/VertexArray.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArray.cpp.i
-.PHONY : source/VertexArray.cpp.i
-
-source/VertexArray.s: source/VertexArray.cpp.s
-
-.PHONY : source/VertexArray.s
-
-# target to generate assembly for a file
-source/VertexArray.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArray.cpp.s
-.PHONY : source/VertexArray.cpp.s
-
-source/VertexBuffer.o: source/VertexBuffer.cpp.o
-
-.PHONY : source/VertexBuffer.o
+.PHONY : source/Shaders/ShaderInitialize.o
 
 # target to build an object file
-source/VertexBuffer.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBuffer.cpp.o
-.PHONY : source/VertexBuffer.cpp.o
+source/Shaders/ShaderInitialize.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.o
+.PHONY : source/Shaders/ShaderInitialize.cpp.o
 
-source/VertexBuffer.i: source/VertexBuffer.cpp.i
+source/Shaders/ShaderInitialize.i: source/Shaders/ShaderInitialize.cpp.i
 
-.PHONY : source/VertexBuffer.i
+.PHONY : source/Shaders/ShaderInitialize.i
 
 # target to preprocess a source file
-source/VertexBuffer.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBuffer.cpp.i
-.PHONY : source/VertexBuffer.cpp.i
+source/Shaders/ShaderInitialize.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.i
+.PHONY : source/Shaders/ShaderInitialize.cpp.i
 
-source/VertexBuffer.s: source/VertexBuffer.cpp.s
+source/Shaders/ShaderInitialize.s: source/Shaders/ShaderInitialize.cpp.s
 
-.PHONY : source/VertexBuffer.s
+.PHONY : source/Shaders/ShaderInitialize.s
 
 # target to generate assembly for a file
-source/VertexBuffer.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBuffer.cpp.s
-.PHONY : source/VertexBuffer.cpp.s
+source/Shaders/ShaderInitialize.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.s
+.PHONY : source/Shaders/ShaderInitialize.cpp.s
+
+source/VertexBuffers/VertexBuffer.o: source/VertexBuffers/VertexBuffer.cpp.o
+
+.PHONY : source/VertexBuffers/VertexBuffer.o
+
+# target to build an object file
+source/VertexBuffers/VertexBuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuffer.cpp.o
+.PHONY : source/VertexBuffers/VertexBuffer.cpp.o
+
+source/VertexBuffers/VertexBuffer.i: source/VertexBuffers/VertexBuffer.cpp.i
+
+.PHONY : source/VertexBuffers/VertexBuffer.i
+
+# target to preprocess a source file
+source/VertexBuffers/VertexBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuffer.cpp.i
+.PHONY : source/VertexBuffers/VertexBuffer.cpp.i
+
+source/VertexBuffers/VertexBuffer.s: source/VertexBuffers/VertexBuffer.cpp.s
+
+.PHONY : source/VertexBuffers/VertexBuffer.s
+
+# target to generate assembly for a file
+source/VertexBuffers/VertexBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuffer.cpp.s
+.PHONY : source/VertexBuffers/VertexBuffer.cpp.s
 
 source/index.o: source/index.cpp.o
 
@@ -325,18 +325,18 @@ help:
 	@echo "... libraries/glad/src/glad.o"
 	@echo "... libraries/glad/src/glad.i"
 	@echo "... libraries/glad/src/glad.s"
-	@echo "... source/IndexBuffer.o"
-	@echo "... source/IndexBuffer.i"
-	@echo "... source/IndexBuffer.s"
+	@echo "... source/IndexBuffers/IndexBuffer.o"
+	@echo "... source/IndexBuffers/IndexBuffer.i"
+	@echo "... source/IndexBuffers/IndexBuffer.s"
 	@echo "... source/Initialize.o"
 	@echo "... source/Initialize.i"
 	@echo "... source/Initialize.s"
-	@echo "... source/VertexArray.o"
-	@echo "... source/VertexArray.i"
-	@echo "... source/VertexArray.s"
-	@echo "... source/VertexBuffer.o"
-	@echo "... source/VertexBuffer.i"
-	@echo "... source/VertexBuffer.s"
+	@echo "... source/Shaders/ShaderInitialize.o"
+	@echo "... source/Shaders/ShaderInitialize.i"
+	@echo "... source/Shaders/ShaderInitialize.s"
+	@echo "... source/VertexBuffers/VertexBuffer.o"
+	@echo "... source/VertexBuffers/VertexBuffer.i"
+	@echo "... source/VertexBuffers/VertexBuffer.s"
 	@echo "... source/index.o"
 	@echo "... source/index.i"
 	@echo "... source/index.s"

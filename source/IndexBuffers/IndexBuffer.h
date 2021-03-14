@@ -1,5 +1,5 @@
 #pragma once
-#include "../index.h"
+#include "index.h"
 
 class IndexBuffer
 {

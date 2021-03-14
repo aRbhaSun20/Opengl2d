@@ -67,9 +67,10 @@ int main(int argc, char *argv[])
       // layout.Push<float>(3);
       // va.AddBuffer(vb, layout);
 
+      int offset = 0;
       glEnableVertexAttribArray(0);
       // links the buffer to vao
-      glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
+      glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)(uint64_t)offset);
 
       // index buffer object
       IndexBuffer ib(indices, 6);
@@ -79,12 +80,12 @@ int main(int argc, char *argv[])
       ShaderInitialize shader("../source/Shaders/Basic.shader");
       shader.Bind();
 
-      shader.SetUniform4f("u_Color", 1.0, 0.5, 0.9, 1.0);
+      shader.SetUniform4f("u_Color", 1.0f, 0.5f, 0.9f, 1.0f);
       // background color
       glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
       // vb.UnBind();
       // ib.UnBind();
-      float r = 0.0, increment = 0.01;
+      float r = 0.0, increment = 0.01,g = 1.0;
 
       while (!glfwWindowShouldClose(hf.window))
       {
@@ -98,7 +99,7 @@ int main(int argc, char *argv[])
 
          // declare the uniforms parameters
          shader.Bind();
-         shader.SetUniform4f("u_Color", r, 0.5, 0.9, 1.0);
+         shader.SetUniform4f("u_Color", r, g, 0.9, 1.0);
 
          glBindVertexArray(vao);
          // va.Bind();
@@ -114,6 +115,7 @@ int main(int argc, char *argv[])
             increment = 0.01;
 
          r += increment;
+         g -= increment;
 
          glfwSwapBuffers(hf.window);
          glfwPollEvents();

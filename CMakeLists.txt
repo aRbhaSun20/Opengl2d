@@ -25,9 +25,9 @@ set(SHADER_DIR "${SRC_DIR}/Shaders")
 set(SHADER_FILES "${SHADER_DIR}/ShaderInitialize.h" 
     "${SHADER_DIR}/ShaderInitialize.cpp")
 
-# Application files "${VERTEX_ARRAY_LAYOUT}"
-set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
-        "${VERTEX_BUFFER}" "${INDEX_BUFFER}""${SHADER_FILES}" )
+# Application files 
+set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" "${VERTEX_ARRAY_LAYOUT}"
+    "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" )
 set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
 
 # Executable definition and properties

@@ -138,8 +138,8 @@ CMakeFiles/glad.dir/clean:
 # Target rules for target CMakeFiles/OpenGL.dir
 
 # All Build rule for target.
-CMakeFiles/OpenGL.dir/all: libraries/glfw/src/CMakeFiles/glfw.dir/all
 CMakeFiles/OpenGL.dir/all: CMakeFiles/glad.dir/all
+CMakeFiles/OpenGL.dir/all: libraries/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/depend
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target OpenGL"

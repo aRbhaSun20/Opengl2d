@@ -1,7 +1,7 @@
 #pragma once 
 #include <fstream>
 #include <sstream>
-#include "../index.h"
+#include "index.h"
 #include <unordered_map>
 
 struct ShaderProgramSource
