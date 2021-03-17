@@ -1,12 +1,12 @@
 #pragma once
 #include "index.h"
 
-class VertexBuffer{
+class VertexBuff{
     private:
         unsigned int m_RendererId;
     public:
-        VertexBuffer(const void *data, unsigned int size);
-        ~VertexBuffer();
+        VertexBuff(const void *data, unsigned int size);
+        ~VertexBuff();
 
         void Bind() const;
         void UnBind() const;

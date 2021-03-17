@@ -7,7 +7,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/IndexBuffers/IndexBuffer.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Initialize.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Shaders/ShaderInitialize.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.o"
-  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBuffers/VertexBuffer.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuffer.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArray.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayout.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBuffers/VertexBuff.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuff.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/index.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/index.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

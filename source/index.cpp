@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "index.h"
 
-
 static void error_callback(int error, const char *description)
 {
    fprintf(stderr, "Error: %s\n", description);
@@ -58,14 +57,13 @@ int main(int argc, char *argv[])
       glBindVertexArray(vao);
 
       // buffer normal
-      // VertexArray va;
-      VertexBuffer vb(vertices, sizeof(vertices));
+      VertexArray va;
+      VertexBuff vb(vertices, 4 * 3 * sizeof(float));
 
-      unsigned int buffer;
+      VertexBufferLayout layout;
+      layout.Push<float>(3);
+      va.AddBuffer(vb, layout);
 
-      // VertexBufferLayout layout;
-      // layout.Push<float>(3);
-      // va.AddBuffer(vb, layout);
 
       int offset = 0;
       glEnableVertexAttribArray(0);
@@ -83,9 +81,9 @@ int main(int argc, char *argv[])
       shader.SetUniform4f("u_Color", 1.0f, 0.5f, 0.9f, 1.0f);
       // background color
       glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-      // vb.UnBind();
-      // ib.UnBind();
-      float r = 0.0, increment = 0.01,g = 1.0;
+      vb.UnBind();
+      ib.UnBind();
+      float r = 0.0, increment = 0.01, g = 1.0;
 
       while (!glfwWindowShouldClose(hf.window))
       {
@@ -101,8 +99,8 @@ int main(int argc, char *argv[])
          shader.Bind();
          shader.SetUniform4f("u_Color", r, g, 0.9, 1.0);
 
-         glBindVertexArray(vao);
-         // va.Bind();
+         va.Bind();
+
          ib.Bind();
 
          // draw triangle
@@ -121,7 +119,7 @@ int main(int argc, char *argv[])
          glfwPollEvents();
       }
 
-      glDeleteBuffers(1, &buffer);
+      // glDeleteBuffers(1, &buffer);
    }
    glfwDestroyWindow(hf.window);
    glfwTerminate();

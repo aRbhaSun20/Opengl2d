@@ -8,7 +8,8 @@
         "sstream": "cpp",
         "deque": "c",
         "string": "c",
-        "vector": "c"
+        "vector": "c",
+        "type_traits": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cmake.configureOnOpen": false

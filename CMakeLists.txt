@@ -8,17 +8,23 @@ set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries")
 
 # Vetex Buffer
 set(VERTEX_DIR "${SRC_DIR}/VertexBuffers")
-set(VERTEX_BUFFER "${VERTEX_DIR}/VertexBuffer.h" 
-    "${VERTEX_DIR}/VertexBuffer.cpp") 
+set(VERTEX_BUFFER "${VERTEX_DIR}/VertexBuff.h" 
+    "${VERTEX_DIR}/VertexBuff.cpp") 
 
-#Index Buffer
+# Index Buffer
 set(INDEX_DIR "${SRC_DIR}/IndexBuffers")
 set(INDEX_BUFFER  "${INDEX_DIR}/IndexBuffer.h" 
     "${INDEX_DIR}/IndexBuffer.cpp")
 
-# Vertex Array and Vertex Buffer Layout
-#set(VERTEX_ARRAY_LAYOUT "${SRC_DIR}/VertexBufferLayout.h"
-#     "${SRC_DIR}/VertexArray.h" "${SRC_DIR}/VertexArray.cpp" )
+# Vertex Array 
+set(VERTEX_ARRAY_DIR "${SRC_DIR}/VertexArrays")
+set(VERTEX_ARRAY "${VERTEX_ARRAY_DIR}/VertexArray.h" 
+            "${VERTEX_ARRAY_DIR}/VertexArray.cpp")
+
+# Vertex Buffer Layout   
+set(VERTEX_BUFFER_LAYOUT_DIR "${SRC_DIR}/VertexBufferLayouts")      
+set(VERTEX_BUFFER_LAYOUT "${VERTEX_BUFFER_LAYOUT_DIR}/VertexBufferLayout.h" 
+                "${VERTEX_BUFFER_LAYOUT_DIR}/VertexBufferLayout.cpp")
 
 # Shader Contents
 set(SHADER_DIR "${SRC_DIR}/Shaders")
@@ -26,12 +32,13 @@ set(SHADER_FILES "${SHADER_DIR}/ShaderInitialize.h"
     "${SHADER_DIR}/ShaderInitialize.cpp")
 
 # Application files 
-set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" "${VERTEX_ARRAY_LAYOUT}"
-    "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" )
+set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
+    "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
+        "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}")
 set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
 
 # Executable definition and properties
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable("${PROJECT_NAME}" "${SOURCES}")
 target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}")
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 

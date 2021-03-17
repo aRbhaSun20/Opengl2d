@@ -1,6 +1,6 @@
 #include "IndexBuffer.h"
 
-IndexBuffer ::IndexBuffer(const unsigned *data, unsigned int count)
+IndexBuffer ::IndexBuffer(const unsigned int *data, unsigned int count)
 :m_Count(count)
 {
     glGenBuffers(1, &m_RendererId);

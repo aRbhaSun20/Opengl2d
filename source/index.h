@@ -4,11 +4,12 @@
 #include <iostream>
 #include <string>
 
-#include "./VertexBuffers/VertexBuffer.h"
+#include "./VertexBuffers/VertexBuff.h"
 #include "./IndexBuffers/IndexBuffer.h"
-// #include "VertexArray.h"
 
 #include "./Shaders/ShaderInitialize.h"
+#include "./VertexArrays/VertexArray.h"
+
 
 template <typename T>
 void Log(T value){
