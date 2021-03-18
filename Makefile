@@ -230,6 +230,33 @@ source/Initialize.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initialize.cpp.s
 .PHONY : source/Initialize.cpp.s
 
+source/Renderer/Renderer.o: source/Renderer/Renderer.cpp.o
+
+.PHONY : source/Renderer/Renderer.o
+
+# target to build an object file
+source/Renderer/Renderer.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o
+.PHONY : source/Renderer/Renderer.cpp.o
+
+source/Renderer/Renderer.i: source/Renderer/Renderer.cpp.i
+
+.PHONY : source/Renderer/Renderer.i
+
+# target to preprocess a source file
+source/Renderer/Renderer.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.i
+.PHONY : source/Renderer/Renderer.cpp.i
+
+source/Renderer/Renderer.s: source/Renderer/Renderer.cpp.s
+
+.PHONY : source/Renderer/Renderer.s
+
+# target to generate assembly for a file
+source/Renderer/Renderer.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.s
+.PHONY : source/Renderer/Renderer.cpp.s
+
 source/Shaders/ShaderInitialize.o: source/Shaders/ShaderInitialize.cpp.o
 
 .PHONY : source/Shaders/ShaderInitialize.o
@@ -257,59 +284,59 @@ source/Shaders/ShaderInitialize.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.s
 .PHONY : source/Shaders/ShaderInitialize.cpp.s
 
-source/VertexArray.o: source/VertexArray.cpp.o
+source/VertexArrays/VertexArray.o: source/VertexArrays/VertexArray.cpp.o
 
-.PHONY : source/VertexArray.o
-
-# target to build an object file
-source/VertexArray.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o
-.PHONY : source/VertexArray.cpp.o
-
-source/VertexArray.i: source/VertexArray.cpp.i
-
-.PHONY : source/VertexArray.i
-
-# target to preprocess a source file
-source/VertexArray.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArray.cpp.i
-.PHONY : source/VertexArray.cpp.i
-
-source/VertexArray.s: source/VertexArray.cpp.s
-
-.PHONY : source/VertexArray.s
-
-# target to generate assembly for a file
-source/VertexArray.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArray.cpp.s
-.PHONY : source/VertexArray.cpp.s
-
-source/VertexBufferLayout.o: source/VertexBufferLayout.cpp.o
-
-.PHONY : source/VertexBufferLayout.o
+.PHONY : source/VertexArrays/VertexArray.o
 
 # target to build an object file
-source/VertexBufferLayout.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o
-.PHONY : source/VertexBufferLayout.cpp.o
+source/VertexArrays/VertexArray.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o
+.PHONY : source/VertexArrays/VertexArray.cpp.o
 
-source/VertexBufferLayout.i: source/VertexBufferLayout.cpp.i
+source/VertexArrays/VertexArray.i: source/VertexArrays/VertexArray.cpp.i
 
-.PHONY : source/VertexBufferLayout.i
+.PHONY : source/VertexArrays/VertexArray.i
 
 # target to preprocess a source file
-source/VertexBufferLayout.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.i
-.PHONY : source/VertexBufferLayout.cpp.i
+source/VertexArrays/VertexArray.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.i
+.PHONY : source/VertexArrays/VertexArray.cpp.i
 
-source/VertexBufferLayout.s: source/VertexBufferLayout.cpp.s
+source/VertexArrays/VertexArray.s: source/VertexArrays/VertexArray.cpp.s
 
-.PHONY : source/VertexBufferLayout.s
+.PHONY : source/VertexArrays/VertexArray.s
 
 # target to generate assembly for a file
-source/VertexBufferLayout.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.s
-.PHONY : source/VertexBufferLayout.cpp.s
+source/VertexArrays/VertexArray.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.s
+.PHONY : source/VertexArrays/VertexArray.cpp.s
+
+source/VertexBufferLayouts/VertexBufferLayout.o: source/VertexBufferLayouts/VertexBufferLayout.cpp.o
+
+.PHONY : source/VertexBufferLayouts/VertexBufferLayout.o
+
+# target to build an object file
+source/VertexBufferLayouts/VertexBufferLayout.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o
+.PHONY : source/VertexBufferLayouts/VertexBufferLayout.cpp.o
+
+source/VertexBufferLayouts/VertexBufferLayout.i: source/VertexBufferLayouts/VertexBufferLayout.cpp.i
+
+.PHONY : source/VertexBufferLayouts/VertexBufferLayout.i
+
+# target to preprocess a source file
+source/VertexBufferLayouts/VertexBufferLayout.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.i
+.PHONY : source/VertexBufferLayouts/VertexBufferLayout.cpp.i
+
+source/VertexBufferLayouts/VertexBufferLayout.s: source/VertexBufferLayouts/VertexBufferLayout.cpp.s
+
+.PHONY : source/VertexBufferLayouts/VertexBufferLayout.s
+
+# target to generate assembly for a file
+source/VertexBufferLayouts/VertexBufferLayout.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.s
+.PHONY : source/VertexBufferLayouts/VertexBufferLayout.cpp.s
 
 source/VertexBuffers/VertexBuff.o: source/VertexBuffers/VertexBuff.cpp.o
 
@@ -385,15 +412,18 @@ help:
 	@echo "... source/Initialize.o"
 	@echo "... source/Initialize.i"
 	@echo "... source/Initialize.s"
+	@echo "... source/Renderer/Renderer.o"
+	@echo "... source/Renderer/Renderer.i"
+	@echo "... source/Renderer/Renderer.s"
 	@echo "... source/Shaders/ShaderInitialize.o"
 	@echo "... source/Shaders/ShaderInitialize.i"
 	@echo "... source/Shaders/ShaderInitialize.s"
-	@echo "... source/VertexArray.o"
-	@echo "... source/VertexArray.i"
-	@echo "... source/VertexArray.s"
-	@echo "... source/VertexBufferLayout.o"
-	@echo "... source/VertexBufferLayout.i"
-	@echo "... source/VertexBufferLayout.s"
+	@echo "... source/VertexArrays/VertexArray.o"
+	@echo "... source/VertexArrays/VertexArray.i"
+	@echo "... source/VertexArrays/VertexArray.s"
+	@echo "... source/VertexBufferLayouts/VertexBufferLayout.o"
+	@echo "... source/VertexBufferLayouts/VertexBufferLayout.i"
+	@echo "... source/VertexBufferLayouts/VertexBufferLayout.s"
 	@echo "... source/VertexBuffers/VertexBuff.o"
 	@echo "... source/VertexBuffers/VertexBuff.i"
 	@echo "... source/VertexBuffers/VertexBuff.s"

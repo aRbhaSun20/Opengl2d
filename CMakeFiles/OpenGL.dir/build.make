@@ -122,31 +122,44 @@ CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Shaders/ShaderInitialize.cpp -o CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.s
 
-CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o: CMakeFiles/OpenGL.dir/flags.make
-CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o: source/VertexArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o -c /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArray.cpp
+CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o: CMakeFiles/OpenGL.dir/flags.make
+CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o: source/VertexArrays/VertexArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o -c /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArrays/VertexArray.cpp
 
-CMakeFiles/OpenGL.dir/source/VertexArray.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL.dir/source/VertexArray.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArray.cpp > CMakeFiles/OpenGL.dir/source/VertexArray.cpp.i
+CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArrays/VertexArray.cpp > CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.i
 
-CMakeFiles/OpenGL.dir/source/VertexArray.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/source/VertexArray.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArray.cpp -o CMakeFiles/OpenGL.dir/source/VertexArray.cpp.s
+CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArrays/VertexArray.cpp -o CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.s
 
-CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o: CMakeFiles/OpenGL.dir/flags.make
-CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o: source/VertexBufferLayout.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o -c /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayout.cpp
+CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o: CMakeFiles/OpenGL.dir/flags.make
+CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o: source/VertexBufferLayouts/VertexBufferLayout.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o -c /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayouts/VertexBufferLayout.cpp
 
-CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayout.cpp > CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.i
+CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayouts/VertexBufferLayout.cpp > CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.i
 
-CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayout.cpp -o CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.s
+CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayouts/VertexBufferLayout.cpp -o CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.s
+
+CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o: CMakeFiles/OpenGL.dir/flags.make
+CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o: source/Renderer/Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o -c /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Renderer/Renderer.cpp
+
+CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Renderer/Renderer.cpp > CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.i
+
+CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Renderer/Renderer.cpp -o CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.s
 
 # Object files for target OpenGL
 OpenGL_OBJECTS = \
@@ -155,8 +168,9 @@ OpenGL_OBJECTS = \
 "CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuff.cpp.o" \
 "CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o" \
 "CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.o" \
-"CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o" \
-"CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o"
+"CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o" \
+"CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o" \
+"CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"
 
 # External object files for target OpenGL
 OpenGL_EXTERNAL_OBJECTS =
@@ -166,15 +180,16 @@ OpenGL: CMakeFiles/OpenGL.dir/source/Initialize.cpp.o
 OpenGL: CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuff.cpp.o
 OpenGL: CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o
 OpenGL: CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.o
-OpenGL: CMakeFiles/OpenGL.dir/source/VertexArray.cpp.o
-OpenGL: CMakeFiles/OpenGL.dir/source/VertexBufferLayout.cpp.o
+OpenGL: CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o
+OpenGL: CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o
+OpenGL: CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o
 OpenGL: CMakeFiles/OpenGL.dir/build.make
 OpenGL: libraries/glfw/src/libglfw3.a
 OpenGL: libglad.a
 OpenGL: /usr/lib/x86_64-linux-gnu/librt.so
 OpenGL: /usr/lib/x86_64-linux-gnu/libm.so
 OpenGL: CMakeFiles/OpenGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable OpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable OpenGL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

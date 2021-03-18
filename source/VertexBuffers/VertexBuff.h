@@ -1,5 +1,5 @@
 #pragma once
-#include "index.h"
+#include <glad/glad.h>
 
 class VertexBuff{
     private:

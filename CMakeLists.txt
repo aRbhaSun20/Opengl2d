@@ -31,11 +31,22 @@ set(SHADER_DIR "${SRC_DIR}/Shaders")
 set(SHADER_FILES "${SHADER_DIR}/ShaderInitialize.h" 
     "${SHADER_DIR}/ShaderInitialize.cpp")
 
+# Renderer Contents
+set(RENDERER_DIR "${SRC_DIR}/Renderer")    
+set(RENDERER_FILES "${RENDERER_DIR}/Renderer.h"
+    "${RENDERER_DIR}/Renderer.cpp")
+
+set(STD_IMAGE_LIBRAY_FILE "${LIB_DIR/StdImage/stb_image.h}")
+
+#additional libraries
+set(ADDITIONAL_LIBRARY "${STD_IMAGE_LIBRAY_FILE}")
+
 # Application files 
 set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
-        "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}")
-set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
+        "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}")
+
+set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" "${ADDITIONAL_LIBRARY}")
 
 # Executable definition and properties
 add_executable("${PROJECT_NAME}" "${SOURCES}")

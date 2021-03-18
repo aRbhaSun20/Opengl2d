@@ -1,15 +1,16 @@
 #pragma once
-#include "index.h"
 
-class IndexBuffer
+#include <glad/glad.h>
+
+class IndexBuff
 {
 private:
     unsigned int m_RendererId;
     unsigned int m_Count;
 
 public:
-    IndexBuffer(const unsigned int *data, unsigned int count);
-    ~IndexBuffer();
+    IndexBuff(const unsigned int *data, unsigned int count);
+    ~IndexBuff();
 
     void Bind() const;
     void UnBind() const;

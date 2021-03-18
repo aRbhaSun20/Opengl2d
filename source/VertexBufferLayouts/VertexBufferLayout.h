@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "index.h"
+#include <glad/glad.h>
 
 struct VertexBufferElement
 {

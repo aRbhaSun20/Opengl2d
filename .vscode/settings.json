@@ -3,13 +3,15 @@
         "*.html": "html",
         "*.py": "python",
         "*.jsx": "javascriptreact",
+        "*.h": "cpp",
         "exception": "cpp",
         "iostream": "cpp",
         "sstream": "cpp",
         "deque": "c",
         "string": "c",
         "vector": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "unordered_map": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cmake.configureOnOpen": false

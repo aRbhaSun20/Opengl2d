@@ -2,6 +2,7 @@
 
 Initialize ::Initialize(int height, int width, const char *title)
 {
+
     windowHeight = width;
     windowWidth = height;
 
@@ -9,7 +10,7 @@ Initialize ::Initialize(int height, int width, const char *title)
         Log("Failure to initialize glfw");
 
     window = glfwCreateWindow(windowWidth, windowHeight, title, nullptr, nullptr);
-    
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -21,6 +22,12 @@ Initialize ::Initialize(int height, int width, const char *title)
         Log("Window cration failure");
         return;
     }
+}
+
+Initialize ::~Initialize()
+{
+    glfwDestroyWindow(window);
+    glfwTerminate();
 }
 
 void Initialize ::Gladinitialization()
