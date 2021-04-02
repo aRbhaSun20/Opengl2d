@@ -1,5 +1,6 @@
 /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/rebuild_cache.dir
 /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/edit_cache.dir
+/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/STB_IMAGE.dir
 /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/glad.dir
 /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir
 /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/glfw/CMakeFiles/rebuild_cache.dir

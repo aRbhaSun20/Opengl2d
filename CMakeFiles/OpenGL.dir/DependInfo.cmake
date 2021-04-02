@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Initialize.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Renderer/Renderer.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Shaders/ShaderInitialize.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Texture/Texture.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Texture/Texture.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexArrays/VertexArray.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBufferLayouts/VertexBufferLayout.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/VertexBuffers/VertexBuff.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuff.cpp.o"
@@ -25,12 +26,14 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "source"
   "libraries/glfw/include"
   "libraries/glad/include"
+  "libraries/StdImage"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/glad.dir/DependInfo.cmake"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/STB_IMAGE.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

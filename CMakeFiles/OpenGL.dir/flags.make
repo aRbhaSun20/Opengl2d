@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = -DGLFW_INCLUDE_NONE
 
-CXX_INCLUDES = -I/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source -I/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/glfw/include -I/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/glad/include 
+CXX_INCLUDES = -I/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source -I/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/glfw/include -I/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/glad/include -I/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/StdImage 
 

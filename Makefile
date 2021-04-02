@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named STB_IMAGE
+
+# Build rule for target.
+STB_IMAGE: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 STB_IMAGE
+.PHONY : STB_IMAGE
+
+# fast build rule for target.
+STB_IMAGE/fast:
+	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
+.PHONY : STB_IMAGE/fast
+
+#=============================================================================
 # Target rules for targets named glad
 
 # Build rule for target.
@@ -148,6 +161,33 @@ glfw: cmake_check_build_system
 glfw/fast:
 	$(MAKE) -f libraries/glfw/src/CMakeFiles/glfw.dir/build.make libraries/glfw/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
+
+libraries/StdImage/stb_image.o: libraries/StdImage/stb_image.cpp.o
+
+.PHONY : libraries/StdImage/stb_image.o
+
+# target to build an object file
+libraries/StdImage/stb_image.cpp.o:
+	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/libraries/StdImage/stb_image.cpp.o
+.PHONY : libraries/StdImage/stb_image.cpp.o
+
+libraries/StdImage/stb_image.i: libraries/StdImage/stb_image.cpp.i
+
+.PHONY : libraries/StdImage/stb_image.i
+
+# target to preprocess a source file
+libraries/StdImage/stb_image.cpp.i:
+	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/libraries/StdImage/stb_image.cpp.i
+.PHONY : libraries/StdImage/stb_image.cpp.i
+
+libraries/StdImage/stb_image.s: libraries/StdImage/stb_image.cpp.s
+
+.PHONY : libraries/StdImage/stb_image.s
+
+# target to generate assembly for a file
+libraries/StdImage/stb_image.cpp.s:
+	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/libraries/StdImage/stb_image.cpp.s
+.PHONY : libraries/StdImage/stb_image.cpp.s
 
 libraries/glad/src/glad.o: libraries/glad/src/glad.c.o
 
@@ -284,6 +324,33 @@ source/Shaders/ShaderInitialize.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.s
 .PHONY : source/Shaders/ShaderInitialize.cpp.s
 
+source/Texture/Texture.o: source/Texture/Texture.cpp.o
+
+.PHONY : source/Texture/Texture.o
+
+# target to build an object file
+source/Texture/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Texture/Texture.cpp.o
+.PHONY : source/Texture/Texture.cpp.o
+
+source/Texture/Texture.i: source/Texture/Texture.cpp.i
+
+.PHONY : source/Texture/Texture.i
+
+# target to preprocess a source file
+source/Texture/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Texture/Texture.cpp.i
+.PHONY : source/Texture/Texture.cpp.i
+
+source/Texture/Texture.s: source/Texture/Texture.cpp.s
+
+.PHONY : source/Texture/Texture.s
+
+# target to generate assembly for a file
+source/Texture/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Texture/Texture.cpp.s
+.PHONY : source/Texture/Texture.cpp.s
+
 source/VertexArrays/VertexArray.o: source/VertexArrays/VertexArray.cpp.o
 
 .PHONY : source/VertexArrays/VertexArray.o
@@ -400,9 +467,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... STB_IMAGE"
 	@echo "... glad"
 	@echo "... OpenGL"
 	@echo "... glfw"
+	@echo "... libraries/StdImage/stb_image.o"
+	@echo "... libraries/StdImage/stb_image.i"
+	@echo "... libraries/StdImage/stb_image.s"
 	@echo "... libraries/glad/src/glad.o"
 	@echo "... libraries/glad/src/glad.i"
 	@echo "... libraries/glad/src/glad.s"
@@ -418,6 +489,9 @@ help:
 	@echo "... source/Shaders/ShaderInitialize.o"
 	@echo "... source/Shaders/ShaderInitialize.i"
 	@echo "... source/Shaders/ShaderInitialize.s"
+	@echo "... source/Texture/Texture.o"
+	@echo "... source/Texture/Texture.i"
+	@echo "... source/Texture/Texture.s"
 	@echo "... source/VertexArrays/VertexArray.o"
 	@echo "... source/VertexArrays/VertexArray.i"
 	@echo "... source/VertexArrays/VertexArray.s"

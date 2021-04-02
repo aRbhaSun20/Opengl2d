@@ -9,6 +9,7 @@
 #include "./Shaders/ShaderInitialize.h"
 #include "./VertexArrays/VertexArray.h"
 #include "./Renderer/Renderer.h"
+#include "./Texture/Texture.h"
 
 
 template <typename T>

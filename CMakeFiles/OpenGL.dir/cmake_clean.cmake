@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.o"
+  "CMakeFiles/OpenGL.dir/source/Texture/Texture.cpp.o"
   "CMakeFiles/OpenGL.dir/source/VertexArrays/VertexArray.cpp.o"
   "CMakeFiles/OpenGL.dir/source/VertexBufferLayouts/VertexBufferLayout.cpp.o"
   "CMakeFiles/OpenGL.dir/source/VertexBuffers/VertexBuff.cpp.o"
