@@ -1,4 +1,5 @@
 # Ignore content built with CMake
 build/
+libraries/
 README1.md
 CMakeFiles/
