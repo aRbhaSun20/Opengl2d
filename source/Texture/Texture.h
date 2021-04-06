@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <stb_image.h>
+#include "../../libraries/StdImage/stb_image.h"
 
 #include "../Renderer/Renderer.h"
 #include "index.h"
@@ -11,7 +11,7 @@ class Texture
 private:
     /* data */
     unsigned int m_RendererID;
-    std::string m_FIlePath;
+    std::string m_FilePath;
     unsigned char *m_LocalBuffer;
     int m_Width, m_Height, m_BPP;
 

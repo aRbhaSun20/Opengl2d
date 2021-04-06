@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named STB_IMAGE
-
-# Build rule for target.
-STB_IMAGE: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 STB_IMAGE
-.PHONY : STB_IMAGE
-
-# fast build rule for target.
-STB_IMAGE/fast:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
-.PHONY : STB_IMAGE/fast
-
-#=============================================================================
 # Target rules for targets named glad
 
 # Build rule for target.
@@ -168,7 +155,7 @@ libraries/StdImage/stb_image.o: libraries/StdImage/stb_image.cpp.o
 
 # target to build an object file
 libraries/StdImage/stb_image.cpp.o:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/libraries/StdImage/stb_image.cpp.o
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/StdImage/stb_image.cpp.o
 .PHONY : libraries/StdImage/stb_image.cpp.o
 
 libraries/StdImage/stb_image.i: libraries/StdImage/stb_image.cpp.i
@@ -177,7 +164,7 @@ libraries/StdImage/stb_image.i: libraries/StdImage/stb_image.cpp.i
 
 # target to preprocess a source file
 libraries/StdImage/stb_image.cpp.i:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/libraries/StdImage/stb_image.cpp.i
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/StdImage/stb_image.cpp.i
 .PHONY : libraries/StdImage/stb_image.cpp.i
 
 libraries/StdImage/stb_image.s: libraries/StdImage/stb_image.cpp.s
@@ -186,7 +173,7 @@ libraries/StdImage/stb_image.s: libraries/StdImage/stb_image.cpp.s
 
 # target to generate assembly for a file
 libraries/StdImage/stb_image.cpp.s:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/libraries/StdImage/stb_image.cpp.s
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/StdImage/stb_image.cpp.s
 .PHONY : libraries/StdImage/stb_image.cpp.s
 
 libraries/glad/src/glad.o: libraries/glad/src/glad.c.o
@@ -467,7 +454,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... STB_IMAGE"
 	@echo "... glad"
 	@echo "... OpenGL"
 	@echo "... glfw"

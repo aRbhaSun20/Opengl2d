@@ -69,7 +69,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/STB_IMAGE.dir/DependInfo.cmake"
   "CMakeFiles/glad.dir/DependInfo.cmake"
   "CMakeFiles/OpenGL.dir/DependInfo.cmake"
   "libraries/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"

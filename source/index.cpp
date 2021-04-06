@@ -41,12 +41,14 @@ int main(int argc, char *argv[])
    {
       // vertices of a geometrical diagram
       float vertices[] = {
-          -0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
-          0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-          0.5f, 0.5f, 0.0f, 1.0f, 1.0f,
-          -0.5f, 0.5f, 0.0f, 0.0f, 1.0f};
+          -0.5f, -0.5f, 0.0f, 0.0f,
+           0.5f, -0.5f, 1.0f, 0.0f,
+           0.5f,  0.5f, 1.0f, 1.0f,
+          -0.5f,  0.5f, 0.0f, 1.0f
+      };
 
       unsigned int indices[6] = {
+          // stbi_set_flip_vertically_on_load(1); 
           0, 1, 2,
           2, 3, 0};
 
@@ -55,11 +57,11 @@ int main(int argc, char *argv[])
 
       // vertex array object
       VertexArray va;
-      VertexBuff vb(vertices, 4 * 5 * sizeof(float));
+      VertexBuff vb(vertices, 4 * 4 * sizeof(float));
 
       VertexBufferLayout layout;
-      layout.Push<float>(3);
-      layout.Push<float>(3);
+      layout.Push<float>(2);
+      layout.Push<float>(2);
       va.AddBuffer(vb, layout);
 
       // index buffer object
@@ -73,8 +75,9 @@ int main(int argc, char *argv[])
       // background color
       glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-      Texture texture("../Images/Example.png");
+      Texture texture("../images/Asset.png");
       texture.Bind();
+
       shader.SetUniform1i("u_Texture", 0);
 
       va.Unbind();

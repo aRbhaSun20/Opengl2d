@@ -53,7 +53,6 @@ CMAKE_BINARY_DIR = /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/STB_IMAGE.dir/all
 all: CMakeFiles/glad.dir/all
 all: CMakeFiles/OpenGL.dir/all
 all: libraries/glfw/all
@@ -66,7 +65,6 @@ preinstall: libraries/glfw/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/STB_IMAGE.dir/clean
 clean: CMakeFiles/glad.dir/clean
 clean: CMakeFiles/OpenGL.dir/clean
 clean: libraries/glfw/clean
@@ -110,40 +108,13 @@ libraries/glfw/src/clean: libraries/glfw/src/CMakeFiles/glfw.dir/clean
 .PHONY : libraries/glfw/src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/STB_IMAGE.dir
-
-# All Build rule for target.
-CMakeFiles/STB_IMAGE.dir/all:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/depend
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=11,12 "Built target STB_IMAGE"
-.PHONY : CMakeFiles/STB_IMAGE.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/STB_IMAGE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/STB_IMAGE.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles 0
-.PHONY : CMakeFiles/STB_IMAGE.dir/rule
-
-# Convenience name for target.
-STB_IMAGE: CMakeFiles/STB_IMAGE.dir/rule
-
-.PHONY : STB_IMAGE
-
-# clean rule for target.
-CMakeFiles/STB_IMAGE.dir/clean:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/clean
-.PHONY : CMakeFiles/STB_IMAGE.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/glad.dir
 
 # All Build rule for target.
 CMakeFiles/glad.dir/all:
 	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/depend
 	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=13,14 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=12,13 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -168,16 +139,15 @@ CMakeFiles/glad.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/OpenGL.dir/all: libraries/glfw/src/CMakeFiles/glfw.dir/all
-CMakeFiles/OpenGL.dir/all: CMakeFiles/STB_IMAGE.dir/all
 CMakeFiles/OpenGL.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/depend
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target OpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target OpenGL"
 .PHONY : CMakeFiles/OpenGL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenGL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OpenGL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles 0
 .PHONY : CMakeFiles/OpenGL.dir/rule
@@ -199,7 +169,7 @@ CMakeFiles/OpenGL.dir/clean:
 libraries/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f libraries/glfw/src/CMakeFiles/glfw.dir/build.make libraries/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f libraries/glfw/src/CMakeFiles/glfw.dir/build.make libraries/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target glfw"
 .PHONY : libraries/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
