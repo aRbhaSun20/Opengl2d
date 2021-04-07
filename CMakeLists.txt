@@ -40,14 +40,21 @@ set(RENDERER_FILES "${RENDERER_DIR}/Renderer.h"
 set(TEXTURE_DIR "${SRC_DIR}/Texture")
 set(TEXTURE_FILES "${TEXTURE_DIR}/Texture.h" "${TEXTURE_DIR}/Texture.cpp")
 
-
+# imgui libraires
+file(GLOB_RECURSE IMGUI
+"${LIB_DIR}/imgui/*.cpp"
+"${LIB_DIR}/imgui/*.h"
+)
 
 # Application files 
 set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
         "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}" 
         "${TEXTURE_FILES}")
-set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
+
+# Library files
+set(LIBRARY_FILES "${IMGUI}")
+set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" "${LIBRARY_FILES}")
 
 # Executable definition and properties
 add_executable("${PROJECT_NAME}" "${SOURCES}")

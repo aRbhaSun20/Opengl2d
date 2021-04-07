@@ -4,6 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/imgui/imgui.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/libraries/imgui/imgui.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/imgui/imgui_demo.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/libraries/imgui/imgui_demo.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/imgui/imgui_draw.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/libraries/imgui/imgui_draw.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/imgui/imgui_impl_glfw.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_glfw.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/imgui/imgui_impl_opengl3.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_opengl3.cpp.o"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/imgui/imgui_widgets.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/IndexBuffers/IndexBuffer.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Initialize.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Renderer/Renderer.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"

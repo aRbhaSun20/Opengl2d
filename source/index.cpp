@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
    // initializations
    glfwSetErrorCallback(error_callback);
 
-   Initialize hf(800, 800, "InitGL");
+   Initialize hf(960, 540, "InitGL");
 
    glfwSetKeyCallback(hf.window, key_callback);
 
@@ -41,14 +41,14 @@ int main(int argc, char *argv[])
    {
       // vertices of a geometrical diagram
       float vertices[] = {
-          -0.5f, -0.5f, 0.0f, 0.0f,
-           0.5f, -0.5f, 1.0f, 0.0f,
-           0.5f,  0.5f, 1.0f, 1.0f,
-          -0.5f,  0.5f, 0.0f, 1.0f
+          100.0f, 100.0f, 0.0f, 0.0f, //0
+          400.0f, 100.0f, 1.0f, 0.0f, //1
+          400.0f, 400.0f, 1.0f, 1.0f, //2
+          100.0f, 400.0f, 0.0f, 1.0f  //3
       };
 
       unsigned int indices[6] = {
-          // stbi_set_flip_vertically_on_load(1); 
+          // stbi_set_flip_vertically_on_load(1);
           0, 1, 2,
           2, 3, 0};
 
@@ -66,11 +66,20 @@ int main(int argc, char *argv[])
 
       // index buffer object
       IndexBuff ib(indices, 6);
-      unsigned int ibo;
+
+      // projection,view,model matrix defination
+      glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
+      glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
+      glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(300, 0, 0));
+
+      // model,view,projection mvp matrix
+      glm::mat4 mvp = proj * view * model;
 
       // shader program initiation
       ShaderInitialize shader("../source/Shaders/Basic.shader");
       shader.Bind();
+
+      shader.SetUniformMat4f("u_MVP", mvp);
 
       // background color
       glClearColor(0.0f, 0.0f, 0.0f, 1.0f);

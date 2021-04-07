@@ -216,6 +216,168 @@ libraries/glad/src/glad.c.s:
 	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/libraries/glad/src/glad.c.s
 .PHONY : libraries/glad/src/glad.c.s
 
+libraries/imgui/imgui.o: libraries/imgui/imgui.cpp.o
+
+.PHONY : libraries/imgui/imgui.o
+
+# target to build an object file
+libraries/imgui/imgui.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui.cpp.o
+.PHONY : libraries/imgui/imgui.cpp.o
+
+libraries/imgui/imgui.i: libraries/imgui/imgui.cpp.i
+
+.PHONY : libraries/imgui/imgui.i
+
+# target to preprocess a source file
+libraries/imgui/imgui.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui.cpp.i
+.PHONY : libraries/imgui/imgui.cpp.i
+
+libraries/imgui/imgui.s: libraries/imgui/imgui.cpp.s
+
+.PHONY : libraries/imgui/imgui.s
+
+# target to generate assembly for a file
+libraries/imgui/imgui.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui.cpp.s
+.PHONY : libraries/imgui/imgui.cpp.s
+
+libraries/imgui/imgui_demo.o: libraries/imgui/imgui_demo.cpp.o
+
+.PHONY : libraries/imgui/imgui_demo.o
+
+# target to build an object file
+libraries/imgui/imgui_demo.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_demo.cpp.o
+.PHONY : libraries/imgui/imgui_demo.cpp.o
+
+libraries/imgui/imgui_demo.i: libraries/imgui/imgui_demo.cpp.i
+
+.PHONY : libraries/imgui/imgui_demo.i
+
+# target to preprocess a source file
+libraries/imgui/imgui_demo.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_demo.cpp.i
+.PHONY : libraries/imgui/imgui_demo.cpp.i
+
+libraries/imgui/imgui_demo.s: libraries/imgui/imgui_demo.cpp.s
+
+.PHONY : libraries/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+libraries/imgui/imgui_demo.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_demo.cpp.s
+.PHONY : libraries/imgui/imgui_demo.cpp.s
+
+libraries/imgui/imgui_draw.o: libraries/imgui/imgui_draw.cpp.o
+
+.PHONY : libraries/imgui/imgui_draw.o
+
+# target to build an object file
+libraries/imgui/imgui_draw.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_draw.cpp.o
+.PHONY : libraries/imgui/imgui_draw.cpp.o
+
+libraries/imgui/imgui_draw.i: libraries/imgui/imgui_draw.cpp.i
+
+.PHONY : libraries/imgui/imgui_draw.i
+
+# target to preprocess a source file
+libraries/imgui/imgui_draw.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_draw.cpp.i
+.PHONY : libraries/imgui/imgui_draw.cpp.i
+
+libraries/imgui/imgui_draw.s: libraries/imgui/imgui_draw.cpp.s
+
+.PHONY : libraries/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+libraries/imgui/imgui_draw.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_draw.cpp.s
+.PHONY : libraries/imgui/imgui_draw.cpp.s
+
+libraries/imgui/imgui_impl_glfw.o: libraries/imgui/imgui_impl_glfw.cpp.o
+
+.PHONY : libraries/imgui/imgui_impl_glfw.o
+
+# target to build an object file
+libraries/imgui/imgui_impl_glfw.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_glfw.cpp.o
+.PHONY : libraries/imgui/imgui_impl_glfw.cpp.o
+
+libraries/imgui/imgui_impl_glfw.i: libraries/imgui/imgui_impl_glfw.cpp.i
+
+.PHONY : libraries/imgui/imgui_impl_glfw.i
+
+# target to preprocess a source file
+libraries/imgui/imgui_impl_glfw.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_glfw.cpp.i
+.PHONY : libraries/imgui/imgui_impl_glfw.cpp.i
+
+libraries/imgui/imgui_impl_glfw.s: libraries/imgui/imgui_impl_glfw.cpp.s
+
+.PHONY : libraries/imgui/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+libraries/imgui/imgui_impl_glfw.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_glfw.cpp.s
+.PHONY : libraries/imgui/imgui_impl_glfw.cpp.s
+
+libraries/imgui/imgui_impl_opengl3.o: libraries/imgui/imgui_impl_opengl3.cpp.o
+
+.PHONY : libraries/imgui/imgui_impl_opengl3.o
+
+# target to build an object file
+libraries/imgui/imgui_impl_opengl3.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_opengl3.cpp.o
+.PHONY : libraries/imgui/imgui_impl_opengl3.cpp.o
+
+libraries/imgui/imgui_impl_opengl3.i: libraries/imgui/imgui_impl_opengl3.cpp.i
+
+.PHONY : libraries/imgui/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+libraries/imgui/imgui_impl_opengl3.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_opengl3.cpp.i
+.PHONY : libraries/imgui/imgui_impl_opengl3.cpp.i
+
+libraries/imgui/imgui_impl_opengl3.s: libraries/imgui/imgui_impl_opengl3.cpp.s
+
+.PHONY : libraries/imgui/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+libraries/imgui/imgui_impl_opengl3.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_opengl3.cpp.s
+.PHONY : libraries/imgui/imgui_impl_opengl3.cpp.s
+
+libraries/imgui/imgui_widgets.o: libraries/imgui/imgui_widgets.cpp.o
+
+.PHONY : libraries/imgui/imgui_widgets.o
+
+# target to build an object file
+libraries/imgui/imgui_widgets.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.o
+.PHONY : libraries/imgui/imgui_widgets.cpp.o
+
+libraries/imgui/imgui_widgets.i: libraries/imgui/imgui_widgets.cpp.i
+
+.PHONY : libraries/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+libraries/imgui/imgui_widgets.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.i
+.PHONY : libraries/imgui/imgui_widgets.cpp.i
+
+libraries/imgui/imgui_widgets.s: libraries/imgui/imgui_widgets.cpp.s
+
+.PHONY : libraries/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+libraries/imgui/imgui_widgets.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.s
+.PHONY : libraries/imgui/imgui_widgets.cpp.s
+
 source/IndexBuffers/IndexBuffer.o: source/IndexBuffers/IndexBuffer.cpp.o
 
 .PHONY : source/IndexBuffers/IndexBuffer.o
@@ -477,6 +639,24 @@ help:
 	@echo "... libraries/glad/src/glad.o"
 	@echo "... libraries/glad/src/glad.i"
 	@echo "... libraries/glad/src/glad.s"
+	@echo "... libraries/imgui/imgui.o"
+	@echo "... libraries/imgui/imgui.i"
+	@echo "... libraries/imgui/imgui.s"
+	@echo "... libraries/imgui/imgui_demo.o"
+	@echo "... libraries/imgui/imgui_demo.i"
+	@echo "... libraries/imgui/imgui_demo.s"
+	@echo "... libraries/imgui/imgui_draw.o"
+	@echo "... libraries/imgui/imgui_draw.i"
+	@echo "... libraries/imgui/imgui_draw.s"
+	@echo "... libraries/imgui/imgui_impl_glfw.o"
+	@echo "... libraries/imgui/imgui_impl_glfw.i"
+	@echo "... libraries/imgui/imgui_impl_glfw.s"
+	@echo "... libraries/imgui/imgui_impl_opengl3.o"
+	@echo "... libraries/imgui/imgui_impl_opengl3.i"
+	@echo "... libraries/imgui/imgui_impl_opengl3.s"
+	@echo "... libraries/imgui/imgui_widgets.o"
+	@echo "... libraries/imgui/imgui_widgets.i"
+	@echo "... libraries/imgui/imgui_widgets.s"
 	@echo "... source/IndexBuffers/IndexBuffer.o"
 	@echo "... source/IndexBuffers/IndexBuffer.i"
 	@echo "... source/IndexBuffers/IndexBuffer.s"
