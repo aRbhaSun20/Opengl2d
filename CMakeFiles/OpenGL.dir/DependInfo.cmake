@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/StdImage/stb_image.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/libraries/StdImage/stb_image.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/IndexBuffers/IndexBuffer.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Initialize.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/source/Renderer/Renderer.cpp" "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"
@@ -27,12 +26,15 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "source"
   "libraries/glfw/include"
   "libraries/glad/include"
+  "libraries/StdImage"
+  "libraries/glm/.."
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/libraries/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/glad.dir/DependInfo.cmake"
+  "/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/CMakeFiles/STB_IMAGE.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

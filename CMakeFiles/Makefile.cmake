@@ -16,6 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "libraries/glfw/CMakeLists.txt"
   "libraries/glfw/src/CMakeLists.txt"
   "libraries/glfw/src/glfw_config.h.in"
+  "libraries/glm/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
@@ -65,10 +66,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/STB_IMAGE.dir/DependInfo.cmake"
   "CMakeFiles/glad.dir/DependInfo.cmake"
   "CMakeFiles/OpenGL.dir/DependInfo.cmake"
   "libraries/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"

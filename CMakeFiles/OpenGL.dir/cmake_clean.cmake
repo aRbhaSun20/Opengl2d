@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/OpenGL.dir/libraries/StdImage/stb_image.cpp.o"
   "CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"

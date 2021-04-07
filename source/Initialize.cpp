@@ -2,7 +2,6 @@
 
 Initialize ::Initialize(int height, int width, const char *title)
 {
-
     windowHeight = width;
     windowWidth = height;
 

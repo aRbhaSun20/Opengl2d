@@ -40,15 +40,13 @@ set(RENDERER_FILES "${RENDERER_DIR}/Renderer.h"
 set(TEXTURE_DIR "${SRC_DIR}/Texture")
 set(TEXTURE_FILES "${TEXTURE_DIR}/Texture.h" "${TEXTURE_DIR}/Texture.cpp")
 
-# Image-STD Contents
-set(IMAGE_DIR "${LIB_DIR}/StdImage")
-set(IMAGE_FILES "${IMAGE_DIR}/stb_image.h" "${IMAGE_DIR}/stb_image.cpp")
+
 
 # Application files 
 set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
         "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}" 
-        "${TEXTURE_FILES}" "${IMAGE_FILES}")
+        "${TEXTURE_FILES}")
 set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" )
 
 # Executable definition and properties
@@ -75,8 +73,13 @@ target_include_directories(${PROJECT_NAME} PRIVATE "${GLAD_DIR}/include")
 target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 
 # stb_image
-# set(STB_IMAGE_DIR "${LIB_DIR}/StdImage")
-# add_library("STB_IMAGE" "${STB_IMAGE_DIR}/stb_image.cpp")
-# target_include_directories("STB_IMAGE" PRIVATE "${STB_IMAGE_DIR}")
-# target_include_directories(${PROJECT_NAME} PRIVATE "${STB_IMAGE_DIR}")
-# target_link_libraries(${PROJECT_NAME} "STB_IMAGE")
+ set(STB_IMAGE_DIR "${LIB_DIR}/StdImage")
+ add_library("STB_IMAGE" "${STB_IMAGE_DIR}/stb_image.cpp")
+ target_include_directories("STB_IMAGE" PRIVATE "${STB_IMAGE_DIR}")
+ target_include_directories(${PROJECT_NAME} PRIVATE "${STB_IMAGE_DIR}")
+ target_link_libraries(${PROJECT_NAME} "STB_IMAGE")
+
+# Math Library
+set(GLM_DIR "${LIB_DIR}/glm")
+add_subdirectory("${GLM_DIR}" EXCLUDE_FROM_ALL)
+target_link_libraries(${PROJECT_NAME} glm)

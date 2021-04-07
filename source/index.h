@@ -1,8 +1,13 @@
 #pragma once
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+
+// internal libraries and packages
 #include <iostream>
 #include <string>
+
+// external libraries and packages
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
 
 #include "VertexBuffers/VertexBuff.h"
 #include "IndexBuffers/IndexBuffer.h"
@@ -26,7 +31,6 @@ public:
     GLFWwindow *window;
     Initialize(int height, int width, const char *title);
     ~Initialize();
-
     void Gladinitialization();
 };
 
