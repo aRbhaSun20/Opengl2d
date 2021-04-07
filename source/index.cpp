@@ -41,16 +41,16 @@ int main(int argc, char *argv[])
    {
       // vertices of a geometrical diagram
       float vertices[] = {
-          100.0f, 100.0f, 0.0f, 0.0f, //0
-          200.0f, 100.0f, 1.0f, 0.0f, //1
-          200.0f, 200.0f, 1.0f, 1.0f, //2
-          100.0f, 200.0f, 0.0f, 1.0f  //3
+          -50.0f, -50.0f, 0.0f, 0.0f, //0
+          50.0f, -50.0f, 1.0f, 0.0f,  //1
+          50.0f, 50.0f, 1.0f, 1.0f,   //2
+          -50.0f, 50.0f, 0.0f, 1.0f   //3
       };
 
       unsigned int indices[6] = {
-          // stbi_set_flip_vertically_on_load(1);
-          0, 1, 2,
-          2, 3, 0};
+          0, 1, 2, //1st triangle
+          2, 3, 0  //2nd triangle
+      };
 
       glEnable(GL_BLEND);
       glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -68,12 +68,12 @@ int main(int argc, char *argv[])
       IndexBuff ib(indices, 6);
 
       // projection,view,model matrix defination
-      glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
-      glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
-      // glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(300, 0, 0));
+      MvpHandle Mvp;
+      
+      Mvp.MvpHandleProjection(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
+      glm::vec3 transformation(0, 0, 0);
+      Mvp.MvpHandleView(1.0f, transformation);
 
-      // model,view,projection mvp matrix
-      // glm::mat4 mvp = proj * view * model;
 
       // shader program initiation
       ShaderInitialize shader("../source/Shaders/Basic.shader");
@@ -95,93 +95,50 @@ int main(int argc, char *argv[])
 
       Renderer renderer;
 
-      // imgui context
-      ImGui::CreateContext();
+      ImguiHandle Imhand(hf.window, "#version 330");
 
-      // Setup Platform/Renderer backends
-      ImGui_ImplGlfw_InitForOpenGL(hf.window, true);
-      ImGui_ImplOpenGL3_Init("#version 330");
+      glm::vec3 translationA(300, 0, 0);
+      glm::vec3 translationB(400, 0, 0);
 
-      ImGui::StyleColorsDark();
-
-      // Our state
-      bool show_demo_window = true;
-      bool show_another_window = false;
-      ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-
-      float r = 0.0, increment = 0.01, g = 1.0;
-      glm::vec3 translation (300, 0, 0);
-     
-     
       while (!glfwWindowShouldClose(hf.window))
       {
          // input
          processInput(hf.window);
 
+         renderer.Clear();
+
          // render
          // Set the clear color to a dim black screen
 
-         glClear(GL_COLOR_BUFFER_BIT);
-         glm::mat4 model = glm::translate(glm::mat4(1.0f), translation);
-
-         // model,view,projection mvp matrix
-         glm::mat4 mvp = proj * view * model;
-
          // declare the uniforms parameters
-         shader.Bind();
-         shader.SetUniform4f("u_Color", r, g, 0.9, 1.0);
-         shader.SetUniformMat4f("u_MVP", mvp);
 
-         renderer.Draw(va, ib, shader);
-         // draw triangle
-
-         ImGui_ImplOpenGL3_NewFrame();
-         ImGui_ImplGlfw_NewFrame();
-         ImGui::NewFrame();
-
-         // color change animations
-         if (r > 1.0)
-            increment = -0.01;
-         else if (r < 0.0)
-            increment = 0.01;
-
-         r += increment;
-         g -= increment;
-
-         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
-         {
-            static float f = 0.0f;
-            static int counter = 0;
-
-            ImGui::Begin("Hello, world!"); // Create a window called "Hello, world!" and append into it.
-
-            ImGui::Text("This is some useful text.");          // Display some text (you can use a format strings too)
-            ImGui::Checkbox("Demo Window", &show_demo_window); // Edit bools storing our window open/close state
-            ImGui::Checkbox("Another Window", &show_another_window);
-
-            ImGui::SliderFloat3("translation", &translation.x, 0.0f, 960.0f);             // Edit 1 float using a slider from 0.0f to 1.0f
-            ImGui::ColorEdit3("clear color", (float *)&clear_color); // Edit 3 floats representing a color
-
-            if (ImGui::Button("Button")) // Buttons return true when clicked (most widgets return true when edited/activated)
-               counter++;
-            ImGui::SameLine();
-            ImGui::Text("counter = %d", counter);
-
-            ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-            ImGui::End();
+         { 
+            // model,view,projection mvp matrix
+            Mvp.MvpHandleModel(1.0f, translationA);
+            shader.SetUniformMat4f("u_MVP", Mvp.mvp());
+            // draw the texture
+            renderer.Draw(va, ib, shader);
          }
 
-         ImGui::Render();
-         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+         { 
+            // model,view,projection mvp matrix
+            Mvp.MvpHandleModel(1.0f, translationB);
+            shader.SetUniformMat4f("u_MVP", Mvp.mvp());
+            // draw the texture
+            renderer.Draw(va, ib, shader);
+         }
+
+         Imhand.CreateNewFrame();
+
+         //  Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
+         Imhand.DrawElements(&translationA.x, &translationB.x, 0, 960, 0, 960);
+
+         Imhand.RenderElements();
 
          glfwSwapBuffers(hf.window);
          glfwPollEvents();
       }
    }
 
-   // Cleanup
-   ImGui_ImplOpenGL3_Shutdown();
-   ImGui_ImplGlfw_Shutdown();
-   ImGui::DestroyContext();
    return 0;
 }

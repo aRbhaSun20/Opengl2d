@@ -10,9 +10,8 @@ class ShaderInitialize;
 
 class Renderer
 {
-public:    
-    // Renderer(const IndexBuff&);
-    // ~Renderer();
+public:
+    void Clear();
     void Draw(const VertexArray &, const IndexBuff &, const ShaderInitialize &) const;
 };
 

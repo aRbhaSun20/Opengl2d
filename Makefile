@@ -378,6 +378,33 @@ libraries/imgui/imgui_widgets.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.s
 .PHONY : libraries/imgui/imgui_widgets.cpp.s
 
+source/ImguiHandle/ImguiHandle.o: source/ImguiHandle/ImguiHandle.cpp.o
+
+.PHONY : source/ImguiHandle/ImguiHandle.o
+
+# target to build an object file
+source/ImguiHandle/ImguiHandle.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/ImguiHandle/ImguiHandle.cpp.o
+.PHONY : source/ImguiHandle/ImguiHandle.cpp.o
+
+source/ImguiHandle/ImguiHandle.i: source/ImguiHandle/ImguiHandle.cpp.i
+
+.PHONY : source/ImguiHandle/ImguiHandle.i
+
+# target to preprocess a source file
+source/ImguiHandle/ImguiHandle.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/ImguiHandle/ImguiHandle.cpp.i
+.PHONY : source/ImguiHandle/ImguiHandle.cpp.i
+
+source/ImguiHandle/ImguiHandle.s: source/ImguiHandle/ImguiHandle.cpp.s
+
+.PHONY : source/ImguiHandle/ImguiHandle.s
+
+# target to generate assembly for a file
+source/ImguiHandle/ImguiHandle.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/ImguiHandle/ImguiHandle.cpp.s
+.PHONY : source/ImguiHandle/ImguiHandle.cpp.s
+
 source/IndexBuffers/IndexBuffer.o: source/IndexBuffers/IndexBuffer.cpp.o
 
 .PHONY : source/IndexBuffers/IndexBuffer.o
@@ -657,6 +684,9 @@ help:
 	@echo "... libraries/imgui/imgui_widgets.o"
 	@echo "... libraries/imgui/imgui_widgets.i"
 	@echo "... libraries/imgui/imgui_widgets.s"
+	@echo "... source/ImguiHandle/ImguiHandle.o"
+	@echo "... source/ImguiHandle/ImguiHandle.i"
+	@echo "... source/ImguiHandle/ImguiHandle.s"
 	@echo "... source/IndexBuffers/IndexBuffer.o"
 	@echo "... source/IndexBuffers/IndexBuffer.i"
 	@echo "... source/IndexBuffers/IndexBuffer.s"

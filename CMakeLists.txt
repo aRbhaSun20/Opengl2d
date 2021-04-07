@@ -40,6 +40,14 @@ set(RENDERER_FILES "${RENDERER_DIR}/Renderer.h"
 set(TEXTURE_DIR "${SRC_DIR}/Texture")
 set(TEXTURE_FILES "${TEXTURE_DIR}/Texture.h" "${TEXTURE_DIR}/Texture.cpp")
 
+#Mvp Handler
+set(MVP_DIR "${SRC_DIR}/Mvps")
+set(MVP_FILES "${MVP_DIR}/MvpHandle.h" "${MVP_DIR}/MvpHandle.cpp")
+
+# Imgui Handler
+set(IMGUI_HANDLER_DIR "${SRC_DIR}/ImguiHandle")
+set(IMGUI_HANDLER_FILES "${IMGUI_HANDLER_DIR}/ImguiHandle.h" "${IMGUI_HANDLER_DIR}/ImguiHandle.cpp")
+
 # imgui libraires
 file(GLOB_RECURSE IMGUI
 "${LIB_DIR}/imgui/*.cpp"
@@ -50,7 +58,8 @@ file(GLOB_RECURSE IMGUI
 set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
         "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}" 
-        "${TEXTURE_FILES}")
+        "${TEXTURE_FILES}" "${IMGUI_HANDLER_FILES}" "${MVP_FILES}"
+)
 
 # Library files
 set(LIBRARY_FILES "${IMGUI}")
