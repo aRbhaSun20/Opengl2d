@@ -13,6 +13,6 @@ public:
     ImguiHandle(GLFWwindow *, const char *);
     void CreateNewFrame();
     void RenderElements();
-    void DrawElements(float *, float *, float, float, float, float);
+    void DrawElements(float *, float *, float *, float, float, float, float);
     ~ImguiHandle();
 };

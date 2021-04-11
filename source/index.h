@@ -9,6 +9,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "VertexBuffers/VertexBuff.h"
 #include "IndexBuffers/IndexBuffer.h"
@@ -31,7 +32,7 @@ private:
 
 public:
     GLFWwindow *window;
-    Initialize(int height, int width, const char *title);
+    Initialize(int , int , const char *);
     ~Initialize();
     void Gladinitialization();
 };

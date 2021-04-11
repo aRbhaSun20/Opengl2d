@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL.dir/source/ImguiHandle/ImguiHandle.cpp.o"
   "CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
+  "CMakeFiles/OpenGL.dir/source/Mvps/MvpHandle.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Renderer/Renderer.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Shaders/ShaderInitialize.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Texture/Texture.cpp.o"

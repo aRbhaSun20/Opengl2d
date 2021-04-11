@@ -25,7 +25,7 @@ void ImguiHandle::RenderElements()
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
 
-void ImguiHandle::DrawElements(float *ElementA, float *ElementB, float minA, float maxA, float minB, float maxB)
+void ImguiHandle::DrawElements(float *ElementA, float *ElementB, float *ElementC, float minA, float maxA, float minB, float maxB)
 {
     {
 
@@ -33,7 +33,7 @@ void ImguiHandle::DrawElements(float *ElementA, float *ElementB, float minA, flo
 
         ImGui::SliderFloat3("Translation A", ElementA, minA, maxA);
         ImGui::SliderFloat3("Translation B", ElementB, minB, maxB);
-
+        ImGui::SliderFloat("Camera Speed", ElementC, 0, 100);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
         ImGui::End();
     }

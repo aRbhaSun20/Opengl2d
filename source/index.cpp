@@ -1,5 +1,15 @@
 #include "index.h"
 
+// camera
+glm::vec3 cameraPos(0.0f, 0.0f, 0.3f);
+glm::vec3 cameraFront(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp(0.0f, 1.0f, 0.0f);
+float speed = 10.0f;
+
+// timing
+float deltaTime = 0.0f;
+float lastFrame = 0.0f;
+
 static void error_callback(int error, const char *description)
 {
    fprintf(stderr, "Error: %s\n", description);
@@ -20,6 +30,24 @@ void processInput(GLFWwindow *window)
 {
    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
       glfwSetWindowShouldClose(window, true);
+
+   float cameraSpeed = speed * deltaTime;
+   if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+   {
+      cameraPos += cameraSpeed * cameraFront;
+   }
+   if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+   {
+      cameraPos -= cameraSpeed * cameraFront;
+   }
+   if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+   {
+      cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+   }
+   if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+   {
+      cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+   }
 }
 
 int main(int argc, char *argv[])
@@ -69,17 +97,14 @@ int main(int argc, char *argv[])
 
       // projection,view,model matrix defination
       MvpHandle Mvp;
-      
+
       Mvp.MvpHandleProjection(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
       glm::vec3 transformation(0, 0, 0);
       Mvp.MvpHandleView(1.0f, transformation);
 
-
       // shader program initiation
       ShaderInitialize shader("../source/Shaders/Basic.shader");
       shader.Bind();
-
-      // shader.SetUniformMat4f("u_MVP", mvp);
 
       // background color
       glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -97,11 +122,15 @@ int main(int argc, char *argv[])
 
       ImguiHandle Imhand(hf.window, "#version 330");
 
-      glm::vec3 translationA(300, 0, 0);
-      glm::vec3 translationB(400, 0, 0);
+      glm::vec3 translationA(480, 200, 0);
+      // glm::vec3 cameraView;
+      glm::vec3 translationB(600, 100, 0);
 
       while (!glfwWindowShouldClose(hf.window))
       {
+         float currentFrame = glfwGetTime();
+         deltaTime = currentFrame - lastFrame;
+         lastFrame = currentFrame;
          // input
          processInput(hf.window);
 
@@ -112,15 +141,16 @@ int main(int argc, char *argv[])
 
          // declare the uniforms parameters
 
-         { 
+         {
             // model,view,projection mvp matrix
+            Mvp.MvpHandleCamera(cameraPos, cameraFront, cameraUp);
             Mvp.MvpHandleModel(1.0f, translationA);
             shader.SetUniformMat4f("u_MVP", Mvp.mvp());
             // draw the texture
             renderer.Draw(va, ib, shader);
          }
 
-         { 
+         {
             // model,view,projection mvp matrix
             Mvp.MvpHandleModel(1.0f, translationB);
             shader.SetUniformMat4f("u_MVP", Mvp.mvp());
@@ -131,8 +161,7 @@ int main(int argc, char *argv[])
          Imhand.CreateNewFrame();
 
          //  Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
-         Imhand.DrawElements(&translationA.x, &translationB.x, 0, 960, 0, 960);
-
+         Imhand.DrawElements(&translationA.x, &translationB.x, &speed, 0, 960, 0, 960);
          Imhand.RenderElements();
 
          glfwSwapBuffers(hf.window);
