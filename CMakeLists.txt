@@ -44,6 +44,10 @@ set(TEXTURE_FILES "${TEXTURE_DIR}/Texture.h" "${TEXTURE_DIR}/Texture.cpp")
 set(MVP_DIR "${SRC_DIR}/Mvps")
 set(MVP_FILES "${MVP_DIR}/MvpHandle.h" "${MVP_DIR}/MvpHandle.cpp")
 
+#Camera Contents
+set(CAMERA_DIR "${SRC_DIR}/Camera")
+set(CAMERRA_FILES "${CAMERA_DIR}/OrthographicCamera.h" "${CAMERA_DIR}/OrthographicCamera.cpp")
+
 # Imgui Handler
 set(IMGUI_HANDLER_DIR "${SRC_DIR}/ImguiHandle")
 set(IMGUI_HANDLER_FILES "${IMGUI_HANDLER_DIR}/ImguiHandle.h" "${IMGUI_HANDLER_DIR}/ImguiHandle.cpp")
@@ -59,6 +63,7 @@ set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp"
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
         "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}" 
         "${TEXTURE_FILES}" "${IMGUI_HANDLER_FILES}" "${MVP_FILES}"
+        "${CAMERRA_FILES}"
 )
 
 # Library files

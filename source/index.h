@@ -19,9 +19,12 @@
 #include "Texture/Texture.h"
 #include "ImguiHandle/ImguiHandle.h"
 #include "Mvps/MvpHandle.h"
+// 
+#include "Camera/OrthographicCamera.h"
 
 template <typename T>
-void Log(T value){
+void Log(T value)
+{
     std::cout << value << std::endl;
 }
 
@@ -29,11 +32,11 @@ class Initialize
 {
 private:
     int windowWidth, windowHeight;
+    GLFWwindow *m_window;
 
 public:
-    GLFWwindow *window;
-    Initialize(int , int , const char *);
+    Initialize(int, int, const char *);
     ~Initialize();
+    GLFWwindow *getWindowReference() { return m_window; }
     void Gladinitialization();
 };
-

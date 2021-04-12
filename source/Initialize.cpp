@@ -1,21 +1,19 @@
 #include "index.h"
 
-Initialize ::Initialize(int height, int width, const char *title)
+Initialize ::Initialize(int width, int height, const char *title)
+:windowHeight(height),windowWidth(width)
 {
-    windowHeight = width;
-    windowWidth = height;
-
     if (!glfwInit())
         Log("Failure to initialize glfw");
 
-    window = glfwCreateWindow(windowWidth, windowHeight, title, nullptr, nullptr);
+   m_window = glfwCreateWindow(windowWidth, windowHeight, title, nullptr, nullptr);
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-    if (!window)
+    if (!m_window)
     {
         glfwTerminate();
         Log("Window cration failure");
@@ -25,7 +23,7 @@ Initialize ::Initialize(int height, int width, const char *title)
 
 Initialize ::~Initialize()
 {
-    glfwDestroyWindow(window);
+    glfwDestroyWindow(m_window);
     glfwTerminate();
 }
 

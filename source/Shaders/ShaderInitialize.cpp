@@ -114,9 +114,10 @@ void ShaderInitialize::SetUniform4f(const std::string &name, float v0, float v1,
     glUniform4f(GetUniformLocation(name), v0, v1, v2, v3);
 }
 
-void ShaderInitialize::SetUniformMat4f(const std::string &name, const glm::mat4& matrix)
+void ShaderInitialize::SetUniformMat4f(const std::string &name, const glm::mat4 &matrix)
 {
-    glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &matrix[0][0]);
+    glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, glm::value_ptr(matrix));
+    // &matrix[0][0]
 }
 
 int ShaderInitialize::GetUniformLocation(const std::string &name)

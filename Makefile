@@ -378,6 +378,33 @@ libraries/imgui/imgui_widgets.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.s
 .PHONY : libraries/imgui/imgui_widgets.cpp.s
 
+source/Camera/OrthographicCamera.o: source/Camera/OrthographicCamera.cpp.o
+
+.PHONY : source/Camera/OrthographicCamera.o
+
+# target to build an object file
+source/Camera/OrthographicCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Camera/OrthographicCamera.cpp.o
+.PHONY : source/Camera/OrthographicCamera.cpp.o
+
+source/Camera/OrthographicCamera.i: source/Camera/OrthographicCamera.cpp.i
+
+.PHONY : source/Camera/OrthographicCamera.i
+
+# target to preprocess a source file
+source/Camera/OrthographicCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Camera/OrthographicCamera.cpp.i
+.PHONY : source/Camera/OrthographicCamera.cpp.i
+
+source/Camera/OrthographicCamera.s: source/Camera/OrthographicCamera.cpp.s
+
+.PHONY : source/Camera/OrthographicCamera.s
+
+# target to generate assembly for a file
+source/Camera/OrthographicCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Camera/OrthographicCamera.cpp.s
+.PHONY : source/Camera/OrthographicCamera.cpp.s
+
 source/ImguiHandle/ImguiHandle.o: source/ImguiHandle/ImguiHandle.cpp.o
 
 .PHONY : source/ImguiHandle/ImguiHandle.o
@@ -711,6 +738,9 @@ help:
 	@echo "... libraries/imgui/imgui_widgets.o"
 	@echo "... libraries/imgui/imgui_widgets.i"
 	@echo "... libraries/imgui/imgui_widgets.s"
+	@echo "... source/Camera/OrthographicCamera.o"
+	@echo "... source/Camera/OrthographicCamera.i"
+	@echo "... source/Camera/OrthographicCamera.s"
 	@echo "... source/ImguiHandle/ImguiHandle.o"
 	@echo "... source/ImguiHandle/ImguiHandle.i"
 	@echo "... source/ImguiHandle/ImguiHandle.s"

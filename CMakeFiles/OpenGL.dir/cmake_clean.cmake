@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_glfw.cpp.o"
   "CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_opengl3.cpp.o"
   "CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.o"
+  "CMakeFiles/OpenGL.dir/source/Camera/OrthographicCamera.cpp.o"
   "CMakeFiles/OpenGL.dir/source/ImguiHandle/ImguiHandle.cpp.o"
   "CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Initialize.cpp.o"
