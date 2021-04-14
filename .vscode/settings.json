@@ -11,7 +11,8 @@
         "string": "c",
         "vector": "c",
         "type_traits": "c",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "iomanip": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cmake.configureOnOpen": false

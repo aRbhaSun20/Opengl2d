@@ -42,11 +42,23 @@ set(TEXTURE_FILES "${TEXTURE_DIR}/Texture.h" "${TEXTURE_DIR}/Texture.cpp")
 
 #Mvp Handler
 set(MVP_DIR "${SRC_DIR}/Mvps")
-set(MVP_FILES "${MVP_DIR}/MvpHandle.h" "${MVP_DIR}/MvpHandle.cpp")
+set(MVP_FILES "${MVP_DIR}/ProjectionMatrix.h" "${MVP_DIR}/ModelMatrix.h" 
+"${MVP_DIR}/MvpMatrix.h" "${MVP_DIR}/MvpMatrix.cpp")
 
 #Camera Contents
 set(CAMERA_DIR "${SRC_DIR}/Camera")
-set(CAMERRA_FILES "${CAMERA_DIR}/OrthographicCamera.h" "${CAMERA_DIR}/OrthographicCamera.cpp")
+set(CAMERA_FILES "${CAMERA_DIR}/OrthographicCamera.h" "${CAMERA_DIR}/OrthographicCamera.cpp"
+"${CAMERA_DIR}/PerspectiveCamera.h" "${CAMERA_DIR}/PerspectiveCamera.cpp")
+
+#Core Contents
+set(CORE_DIRS "${SRC_DIR}/Core")
+set(CORE_FILES "${CORE_DIRS}/Input.h" "${CORE_DIRS}/KeyCodes.h" 
+"${CORE_DIRS}/MouseCodes.h" "${CORE_DIRS}/Timestep.h")
+
+#Events Contents
+set(EVENT_DIRS "${SRC_DIR}/Events")
+#set(EVENT_FILES )
+
 
 # Imgui Handler
 set(IMGUI_HANDLER_DIR "${SRC_DIR}/ImguiHandle")
@@ -58,13 +70,19 @@ file(GLOB_RECURSE IMGUI
 "${LIB_DIR}/imgui/*.h"
 )
 
+# spdlog libraires
+#file(GLOB_RECURSE SPDLOG
+#"${LIB_DIR}/spdlog/*.h" "${LIB_DIR}/spdlog/cfg/*.h" "${LIB_DIR}/spdlog/details/*.h" "${LIB_DIR}/spdlog/fmt/*.h"
+# "${LIB_DIR}/spdlog/fmt/bundled/*.h" "${LIB_DIR}/spdlog/sinks/*.h") "${SPDLOG}"
+
 # Application files 
 set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
         "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}" 
         "${TEXTURE_FILES}" "${IMGUI_HANDLER_FILES}" "${MVP_FILES}"
-        "${CAMERRA_FILES}"
+        "${CAMERA_FILES}" "${CORE_FILES}"  
 )
+ #"${EVENT_FILES}"
 
 # Library files
 set(LIBRARY_FILES "${IMGUI}")

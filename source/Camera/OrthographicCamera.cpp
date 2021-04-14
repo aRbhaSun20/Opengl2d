@@ -24,6 +24,13 @@ void OrthographicCamera::reorganizeCamera(float left, float right, float bottom,
     m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix ;
     // m_ModelViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix * m_modelMatrix;
 }
+void OrthographicCamera::SetProjection(float left, float right, float bottom, float top)
+{
+    // HZ_PROFILE_FUNCTION();
+
+    m_ProjectionMatrix = glm::ortho(left, right, bottom, top, -1.0f, 1.0f);
+    m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
+}
 
 // camera movements
 void OrthographicCamera::MvpHandleCamera(glm::vec3 cameraPos, glm::vec3 cameraFront, glm::vec3 cameraUp)
@@ -34,15 +41,4 @@ void OrthographicCamera::MvpHandleCamera(glm::vec3 cameraPos, glm::vec3 cameraFr
 void OrthographicCamera::MvpHandleModel(glm::vec3 translation)
 {
     m_modelMatrix = glm::translate(glm::mat4(1.0f), translation);
-}
-
-// movement functionality
-void OrthographicCamera::CameraTransformation(glm::vec3 transformation)
-{
-    m_ProjectionMatrix *= glm::translate(glm::mat4(1.0f), transformation);
-}
-
-void OrthographicCamera::MvpHandleView(glm::vec3 transformation)
-{
-    m_ViewMatrix = glm::translate(glm::mat4(1.0f), transformation);
 }
