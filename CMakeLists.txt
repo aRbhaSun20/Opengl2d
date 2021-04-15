@@ -52,12 +52,11 @@ set(CAMERA_FILES "${CAMERA_DIR}/OrthographicCamera.h" "${CAMERA_DIR}/Orthographi
 
 #Core Contents
 set(CORE_DIRS "${SRC_DIR}/Core")
-set(CORE_FILES "${CORE_DIRS}/Input.h" "${CORE_DIRS}/KeyCodes.h" 
-"${CORE_DIRS}/MouseCodes.h" "${CORE_DIRS}/Timestep.h")
+set(CORE_FILES "${CORE_DIRS}/Input.h" "${CORE_DIRS}/Timestep.h" )
 
 #Events Contents
 set(EVENT_DIRS "${SRC_DIR}/Events")
-#set(EVENT_FILES )
+set(EVENT_FILES "${EVENT_DIRS}/Event.h" "${EVENT_DIRS}/Event.cpp")
 
 
 # Imgui Handler
@@ -75,14 +74,17 @@ file(GLOB_RECURSE IMGUI
 #"${LIB_DIR}/spdlog/*.h" "${LIB_DIR}/spdlog/cfg/*.h" "${LIB_DIR}/spdlog/details/*.h" "${LIB_DIR}/spdlog/fmt/*.h"
 # "${LIB_DIR}/spdlog/fmt/bundled/*.h" "${LIB_DIR}/spdlog/sinks/*.h") "${SPDLOG}"
 
+#Initializer Contents
+set(INITIALIZER_DIR "${SRC_DIR}/Initializer")
+set(INITIALIZER_FILES "${INITIALIZER_DIR}/Initialize.h" "${INITIALIZER_DIR}/Initialize.cpp")
+
 # Application files 
-set(SECONDARY "${SRC_DIR}/index.h" "${SRC_DIR}/Initialize.cpp" 
+set(SECONDARY "${SRC_DIR}/index.h" "${INITIALIZER_FILES}" 
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
         "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}" 
         "${TEXTURE_FILES}" "${IMGUI_HANDLER_FILES}" "${MVP_FILES}"
-        "${CAMERA_FILES}" "${CORE_FILES}"  
+        "${CAMERA_FILES}" "${CORE_FILES}"  "${EVENT_FILES}"
 )
- #"${EVENT_FILES}"
 
 # Library files
 set(LIBRARY_FILES "${IMGUI}")

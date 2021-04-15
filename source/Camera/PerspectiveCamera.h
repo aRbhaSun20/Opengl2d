@@ -70,7 +70,6 @@ public:
 		return viewMatrix;
 	};
 
-
 	float getZoomLevel() { return Zoom; };
 
 	glm::vec3 getCameraPosition() { return Position; };
@@ -100,4 +99,5 @@ public:
 		// Update Front, Right and Up Vectors using the updated Euler angles
 		updateCameraVectors();
 	}
+
 };

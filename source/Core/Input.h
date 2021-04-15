@@ -2,17 +2,26 @@
 
 #include <glm/glm.hpp>
 
-namespace Engine
+#include "KeyCodes.h"
+#include "MouseCodes.h"
+
+// class Input
+// {
+// public:
+//     static bool IsKeyPressed(KeyCode key);
+
+//     static bool IsMouseButtonPressed(MouseCode button);
+//     static glm::vec2 GetMousePosition();
+//     static float GetMouseX();
+//     static float GetMouseY();
+// };
+
+class Input
 {
+private:
+    /* data */
+public:
+    Input(/* args */);
+    ~Input();
+};
 
-    class Input
-    {
-    public:
-        // static bool IsKeyPressed(KeyCode key);
-
-        // static bool IsMouseButtonPressed(MouseCode button);
-        static glm::vec2 GetMousePosition();
-        static float GetMouseX();
-        static float GetMouseY();
-    };
-} // namespace Engine

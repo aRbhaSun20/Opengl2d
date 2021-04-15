@@ -28,9 +28,7 @@ void ImguiHandle::RenderElements()
 void ImguiHandle::DrawElements(float *ElementA, float *ElementB, float minA, float maxA, float minB, float maxB)
 {
     {
-
         ImGui::Begin("Hello, world!"); // Create a window called "Hello, world!" and append into it.
-
         ImGui::SliderFloat3("Translation A", ElementA, minA, maxA);
         ImGui::SliderFloat3("Translation B", ElementB, minB, maxB);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);

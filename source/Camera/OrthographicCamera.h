@@ -51,5 +51,6 @@ public:
     void MvpHandleModel(glm::vec3);
     void CameraTransformation(glm::vec3 transformation);
     void MvpHandleCamera(glm::vec3 cameraPos, glm::vec3 cameraFront, glm::vec3 cameraUp);
+
 };
 

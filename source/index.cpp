@@ -5,15 +5,10 @@ glm::vec3 cameraPos(0.0f, 0.0f, 3.0f);
 glm::vec3 cameraFront(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp(0.0f, 1.0f, 0.0f);
 
-const int WIDTH = 960;
-const int HEIGHT = 560;
+#define WIDTH 960
+#define HEIGHT 560
 
-float speed = 10.0f;
-float yaw = -90.0f;
-float pitch = 0.0f;
 // timing
-
-// float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 float field_of_view = 45.0f;
 
@@ -27,38 +22,22 @@ Timestep timestep;
 glm::vec3 cameraPosition(0.0f, 0.0f, 3.0f);
 PerspectiveCamera p_camera(cameraPosition);
 
-static void error_callback(int error, const char *description)
-{
-   fprintf(stderr, "Error: %s\n", description);
-}
-
-void framebuffer_size(GLFWwindow *window, int width, int height)
-{
-   glViewport(0, 0, width, height);
-}
-
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods);
-void mouse_callback(GLFWwindow *window, double xpos, double ypos);
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset);
-void processInput(GLFWwindow *window);
 
 int main(int argc, char *argv[])
 {
-   // initializations
-   glfwSetErrorCallback(error_callback);
+   // glfw initializations
+   Initialize Initiate(WIDTH, HEIGHT, "InitGL");
 
-   Initialize hf(WIDTH, HEIGHT, "InitGL");
-   glfwMakeContextCurrent(hf.getWindowReference());
+   // Event handler
+   Event EventHandler(Initiate.getWindowReference(), p_camera, timestep, WIDTH, HEIGHT);
 
-   glfwSetFramebufferSizeCallback(hf.getWindowReference(), framebuffer_size);
+   glfwSetScrollCallback(Initiate.getWindowReference(), scroll_callback);
 
-   glfwSetKeyCallback(hf.getWindowReference(), key_callback);
-   glfwSetCursorPosCallback(hf.getWindowReference(), mouse_callback);
-   glfwSetScrollCallback(hf.getWindowReference(), scroll_callback);
+   glfwSetInputMode(Initiate.getWindowReference(), GLFW_CURSOR, GLFW_CURSOR_NORMAL);
 
-   glfwSetInputMode(hf.getWindowReference(), GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-
-   hf.Gladinitialization();
+   // glad initializations
+   Initiate.Gladinitialization();
 
    // start the declarations from here
    {
@@ -121,18 +100,19 @@ int main(int argc, char *argv[])
 
       Renderer renderer;
 
-      ImguiHandle Imhand(hf.getWindowReference(), "#version 330");
+      ImguiHandle Imhand(Initiate.getWindowReference(), "#version 330");
 
       glm::vec3 translationA(480, 200, 0);
       glm::vec3 translationB(600, 100, 0);
 
-      while (!glfwWindowShouldClose(hf.getWindowReference()))
+      while (!glfwWindowShouldClose(Initiate.getWindowReference()))
       {
          float time = (float)glfwGetTime();
          timestep = time - lastFrame;
          lastFrame = time;
          // input
-         processInput(hf.getWindowReference());
+         EventHandler.Event_Keyboard_Callback();
+         EventHandler.Event_Mouse_Callback();
 
          renderer.Clear();
          // render
@@ -141,7 +121,6 @@ int main(int argc, char *argv[])
          // declare the uniforms parameters
 
          {
-
             // // draw the texture
             mvp.setMvpMatrix(Projection, p_camera, Model);
             shader.SetUniformMat4f("u_MVP", mvp.getMvpMatrix());
@@ -149,12 +128,10 @@ int main(int argc, char *argv[])
          }
 
          Imhand.CreateNewFrame();
-
-         //  Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
          Imhand.DrawElements(&translationA.x, &translationB.x, 0, 960, 0, 960);
          Imhand.RenderElements();
 
-         glfwSwapBuffers(hf.getWindowReference());
+         glfwSwapBuffers(Initiate.getWindowReference());
          glfwPollEvents();
       }
    }
@@ -162,72 +139,7 @@ int main(int argc, char *argv[])
    return 0;
 }
 
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods)
-{
-   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-      glfwSetWindowShouldClose(window, GLFW_TRUE);
-}
-
-void mouse_callback(GLFWwindow *window, double xpos, double ypos)
-{
-   float sensitivity = 0.15f;
-
-   if (firstMouse)
-   {
-      lastX = xpos;
-      lastY = ypos;
-      firstMouse = false;
-   }
-
-   float xOffset = (xpos - lastX);
-   float yOffset = (lastY - ypos);
-
-   lastX = xpos;
-   lastY = ypos;
-
-   p_camera.ProcessMouseMovement(xOffset, yOffset);
-}
-
 void scroll_callback(GLFWwindow *window, double xoffset, double yoffset)
 {
-
    p_camera.ProcessMouseScroll(yoffset);
-}
-
-void processInput(GLFWwindow *window)
-{
-   if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-      glfwSetWindowShouldClose(window, true);
-
-   // float cameraSpeed = speed * timestep.GetSeconds();
-
-   if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
-   {
-      // cameraPos += cameraSpeed * cameraFront;
-      p_camera.ProcessKeyboard(Camera_Movement::FORWARD, timestep.GetSeconds());
-   }
-   if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
-   {
-      // cameraPos -= cameraSpeed * cameraFront;
-      p_camera.ProcessKeyboard(Camera_Movement::BACKWARD, timestep.GetSeconds());
-   }
-   if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
-   {
-      // cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-      p_camera.ProcessKeyboard(Camera_Movement::LEFT, timestep.GetSeconds());
-   }
-   if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
-   {
-      // cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-      p_camera.ProcessKeyboard(Camera_Movement::RIGHT, timestep.GetSeconds());
-   }
-   if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-   {
-      p_camera.ProcessKeyboard(Camera_Movement::UP, timestep.GetSeconds());
-   }
-
-   if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
-   {
-      p_camera.ProcessKeyboard(Camera_Movement::DOWN, timestep.GetSeconds());
-   }
 }

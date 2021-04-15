@@ -1,8 +1,11 @@
 #include "index.h"
+// #include "../Debug/Debug.h"
 
 Initialize ::Initialize(int width, int height, const char *title)
 :windowHeight(height),windowWidth(width)
 {
+    glfwSetErrorCallback(error_callback);
+
     if (!glfwInit())
         Log("Failure to initialize glfw");
 
@@ -19,6 +22,9 @@ Initialize ::Initialize(int width, int height, const char *title)
         Log("Window cration failure");
         return;
     }
+    glfwMakeContextCurrent(m_window);
+
+    glfwSetFramebufferSizeCallback(m_window, framebuffer_size);
 }
 
 Initialize ::~Initialize()

@@ -14,7 +14,9 @@
 // #include "Core/Base.h"
 #include "Core/Timestep.h"
 #include "Core/Input.h"
-// #include "Events/Events.h"
+#include "Events/Event.h"
+
+#include "Initializer/Initialize.h"
 
 #include "VertexBuffers/VertexBuff.h"
 #include "IndexBuffers/IndexBuffer.h"
@@ -28,8 +30,6 @@
 
 #include "Mvps/ProjectionMatrix.h"
 #include "Mvps/ModelMatrix.h"
-
-#include "Camera/OrthographicCamera.h"
 #include "Camera/PerspectiveCamera.h"
 
 template <typename T>
@@ -38,16 +38,11 @@ void Log(T value)
     std::cout << value << std::endl;
 }
 
-class Initialize
+class index
 {
-private:
-    int windowWidth, windowHeight;
-    GLFWwindow *m_window;
-
 public:
-    Initialize(int, int, const char *);
-    Timestep timestep;
-    GLFWwindow *getWindowReference() { return m_window; }
-    void Gladinitialization();
-    ~Initialize();
+    // Initialize Initiate;
+public:
+    index();
+    ~index();
 };
