@@ -2,6 +2,11 @@
 
 void Event::Event_Keyboard_Callback()
 {
+    if (glfwGetKey(m_Window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    {
+        // glfwWindowShouldClose(m_Window, GL_TRUE);
+        glfwSetWindowShouldClose(m_Window, GLFW_TRUE);
+    }
     if (glfwGetKey(m_Window, GLFW_KEY_UP) == GLFW_PRESS)
     {
         m_View.ProcessKeyboard(Camera_Movement::FORWARD, m_Timestep.GetSeconds());

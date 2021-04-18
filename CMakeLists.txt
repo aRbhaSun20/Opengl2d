@@ -52,16 +52,17 @@ set(CAMERA_FILES "${CAMERA_DIR}/OrthographicCamera.h" "${CAMERA_DIR}/Orthographi
 
 #Core Contents
 set(CORE_DIRS "${SRC_DIR}/Core")
-set(CORE_FILES "${CORE_DIRS}/Input.h" "${CORE_DIRS}/Timestep.h" )
+set(CORE_FILES "${CORE_DIRS}/Input.h" "${CORE_DIRS}/Timestep.h" 
+"${CORE_DIRS}/ExecuteCommands.h" "${CORE_DIRS}/ExecuteCommands.cpp")
 
 #Events Contents
 set(EVENT_DIRS "${SRC_DIR}/Events")
 set(EVENT_FILES "${EVENT_DIRS}/Event.h" "${EVENT_DIRS}/Event.cpp")
 
-
 # Imgui Handler
 set(IMGUI_HANDLER_DIR "${SRC_DIR}/ImguiHandle")
-set(IMGUI_HANDLER_FILES "${IMGUI_HANDLER_DIR}/ImguiHandle.h" "${IMGUI_HANDLER_DIR}/ImguiHandle.cpp")
+set(IMGUI_HANDLER_FILES "${IMGUI_HANDLER_DIR}/ImGuiBuild.h" 
+"${IMGUI_HANDLER_DIR}/ImguiHandle.h" "${IMGUI_HANDLER_DIR}/ImguiHandle.cpp")
 
 # imgui libraires
 file(GLOB_RECURSE IMGUI
@@ -74,20 +75,26 @@ file(GLOB_RECURSE IMGUI
 #"${LIB_DIR}/spdlog/*.h" "${LIB_DIR}/spdlog/cfg/*.h" "${LIB_DIR}/spdlog/details/*.h" "${LIB_DIR}/spdlog/fmt/*.h"
 # "${LIB_DIR}/spdlog/fmt/bundled/*.h" "${LIB_DIR}/spdlog/sinks/*.h") "${SPDLOG}"
 
+set(NATIVEFILEDIALOGDIR "${LIB_DIR}/nativefiledialog")
+file(GLOB_RECURSE NATIVEFILEDIALOGFILES 
+"${NATIVEFILEDIALOGDIR}/src/include/nfd.h"
+)
+
 #Initializer Contents
 set(INITIALIZER_DIR "${SRC_DIR}/Initializer")
 set(INITIALIZER_FILES "${INITIALIZER_DIR}/Initialize.h" "${INITIALIZER_DIR}/Initialize.cpp")
 
 # Application files 
-set(SECONDARY "${SRC_DIR}/index.h" "${INITIALIZER_FILES}" 
+set(SECONDARY "${SRC_DIR}/precomz.h" "${SRC_DIR}/index.h" "${INITIALIZER_FILES}" 
     "${VERTEX_BUFFER}" "${INDEX_BUFFER}" "${SHADER_FILES}" 
         "${VERTEX_ARRAY}" "${VERTEX_BUFFER_LAYOUT}" "${RENDERER_FILES}" 
         "${TEXTURE_FILES}" "${IMGUI_HANDLER_FILES}" "${MVP_FILES}"
         "${CAMERA_FILES}" "${CORE_FILES}"  "${EVENT_FILES}"
+        
 )
 
 # Library files
-set(LIBRARY_FILES "${IMGUI}")
+set(LIBRARY_FILES "${IMGUI}" "${NATIVEFILEDIALOGFILES}")
 set(SOURCES "${SRC_DIR}/index.cpp" "${SECONDARY}" "${LIBRARY_FILES}")
 
 # Executable definition and properties

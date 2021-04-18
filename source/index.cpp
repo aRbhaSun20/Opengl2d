@@ -29,6 +29,9 @@ int main(int argc, char *argv[])
    // glfw initializations
    Initialize Initiate(WIDTH, HEIGHT, "InitGL");
 
+   // Commands Executioner
+   ExecuteCommands ExeCommands;
+
    // Event handler
    Event EventHandler(Initiate.getWindowReference(), p_camera, timestep, WIDTH, HEIGHT);
 
@@ -89,21 +92,15 @@ int main(int argc, char *argv[])
       // background color
       glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-      Texture texture("../images/Asset.png");
+      Texture texture("/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/images/Asset.png");
       texture.Bind();
 
       shader.SetUniform1i("u_Texture", 0);
 
-      va.Unbind();
-      vb.UnBind();
-      ib.UnBind();
-
       Renderer renderer;
 
-      ImguiHandle Imhand(Initiate.getWindowReference(), "#version 330");
-
-      glm::vec3 translationA(480, 200, 0);
-      glm::vec3 translationB(600, 100, 0);
+      ImguiHandle Imhand(Initiate.getWindowReference(), ExeCommands, texture, "#version 330", WIDTH, HEIGHT);
+      Imhand.OnAttach();
 
       while (!glfwWindowShouldClose(Initiate.getWindowReference()))
       {
@@ -128,8 +125,9 @@ int main(int argc, char *argv[])
          }
 
          Imhand.CreateNewFrame();
-         Imhand.DrawElements(&translationA.x, &translationB.x, 0, 960, 0, 960);
-         Imhand.RenderElements();
+
+         Imhand.DrawElements();
+         Imhand.DestroyCreatedFrame();
 
          glfwSwapBuffers(Initiate.getWindowReference());
          glfwPollEvents();

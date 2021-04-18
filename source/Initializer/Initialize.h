@@ -1,9 +1,8 @@
 #pragma once
 
 // external libraries and packages
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 
+#include "precomz.h"
 class Initialize
 {
 private:

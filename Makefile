@@ -351,6 +351,33 @@ libraries/imgui/imgui_impl_opengl3.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_impl_opengl3.cpp.s
 .PHONY : libraries/imgui/imgui_impl_opengl3.cpp.s
 
+libraries/imgui/imgui_tables.o: libraries/imgui/imgui_tables.cpp.o
+
+.PHONY : libraries/imgui/imgui_tables.o
+
+# target to build an object file
+libraries/imgui/imgui_tables.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_tables.cpp.o
+.PHONY : libraries/imgui/imgui_tables.cpp.o
+
+libraries/imgui/imgui_tables.i: libraries/imgui/imgui_tables.cpp.i
+
+.PHONY : libraries/imgui/imgui_tables.i
+
+# target to preprocess a source file
+libraries/imgui/imgui_tables.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_tables.cpp.i
+.PHONY : libraries/imgui/imgui_tables.cpp.i
+
+libraries/imgui/imgui_tables.s: libraries/imgui/imgui_tables.cpp.s
+
+.PHONY : libraries/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+libraries/imgui/imgui_tables.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/libraries/imgui/imgui_tables.cpp.s
+.PHONY : libraries/imgui/imgui_tables.cpp.s
+
 libraries/imgui/imgui_widgets.o: libraries/imgui/imgui_widgets.cpp.o
 
 .PHONY : libraries/imgui/imgui_widgets.o
@@ -404,6 +431,60 @@ source/Camera/OrthographicCamera.s: source/Camera/OrthographicCamera.cpp.s
 source/Camera/OrthographicCamera.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Camera/OrthographicCamera.cpp.s
 .PHONY : source/Camera/OrthographicCamera.cpp.s
+
+source/Camera/PerspectiveCamera.o: source/Camera/PerspectiveCamera.cpp.o
+
+.PHONY : source/Camera/PerspectiveCamera.o
+
+# target to build an object file
+source/Camera/PerspectiveCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Camera/PerspectiveCamera.cpp.o
+.PHONY : source/Camera/PerspectiveCamera.cpp.o
+
+source/Camera/PerspectiveCamera.i: source/Camera/PerspectiveCamera.cpp.i
+
+.PHONY : source/Camera/PerspectiveCamera.i
+
+# target to preprocess a source file
+source/Camera/PerspectiveCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Camera/PerspectiveCamera.cpp.i
+.PHONY : source/Camera/PerspectiveCamera.cpp.i
+
+source/Camera/PerspectiveCamera.s: source/Camera/PerspectiveCamera.cpp.s
+
+.PHONY : source/Camera/PerspectiveCamera.s
+
+# target to generate assembly for a file
+source/Camera/PerspectiveCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Camera/PerspectiveCamera.cpp.s
+.PHONY : source/Camera/PerspectiveCamera.cpp.s
+
+source/Events/Event.o: source/Events/Event.cpp.o
+
+.PHONY : source/Events/Event.o
+
+# target to build an object file
+source/Events/Event.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Events/Event.cpp.o
+.PHONY : source/Events/Event.cpp.o
+
+source/Events/Event.i: source/Events/Event.cpp.i
+
+.PHONY : source/Events/Event.i
+
+# target to preprocess a source file
+source/Events/Event.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Events/Event.cpp.i
+.PHONY : source/Events/Event.cpp.i
+
+source/Events/Event.s: source/Events/Event.cpp.s
+
+.PHONY : source/Events/Event.s
+
+# target to generate assembly for a file
+source/Events/Event.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Events/Event.cpp.s
+.PHONY : source/Events/Event.cpp.s
 
 source/ImguiHandle/ImguiHandle.o: source/ImguiHandle/ImguiHandle.cpp.o
 
@@ -459,59 +540,59 @@ source/IndexBuffers/IndexBuffer.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.s
 .PHONY : source/IndexBuffers/IndexBuffer.cpp.s
 
-source/Initialize.o: source/Initialize.cpp.o
+source/Initializer/Initialize.o: source/Initializer/Initialize.cpp.o
 
-.PHONY : source/Initialize.o
-
-# target to build an object file
-source/Initialize.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initialize.cpp.o
-.PHONY : source/Initialize.cpp.o
-
-source/Initialize.i: source/Initialize.cpp.i
-
-.PHONY : source/Initialize.i
-
-# target to preprocess a source file
-source/Initialize.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initialize.cpp.i
-.PHONY : source/Initialize.cpp.i
-
-source/Initialize.s: source/Initialize.cpp.s
-
-.PHONY : source/Initialize.s
-
-# target to generate assembly for a file
-source/Initialize.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initialize.cpp.s
-.PHONY : source/Initialize.cpp.s
-
-source/Mvps/MvpHandle.o: source/Mvps/MvpHandle.cpp.o
-
-.PHONY : source/Mvps/MvpHandle.o
+.PHONY : source/Initializer/Initialize.o
 
 # target to build an object file
-source/Mvps/MvpHandle.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Mvps/MvpHandle.cpp.o
-.PHONY : source/Mvps/MvpHandle.cpp.o
+source/Initializer/Initialize.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initializer/Initialize.cpp.o
+.PHONY : source/Initializer/Initialize.cpp.o
 
-source/Mvps/MvpHandle.i: source/Mvps/MvpHandle.cpp.i
+source/Initializer/Initialize.i: source/Initializer/Initialize.cpp.i
 
-.PHONY : source/Mvps/MvpHandle.i
+.PHONY : source/Initializer/Initialize.i
 
 # target to preprocess a source file
-source/Mvps/MvpHandle.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Mvps/MvpHandle.cpp.i
-.PHONY : source/Mvps/MvpHandle.cpp.i
+source/Initializer/Initialize.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initializer/Initialize.cpp.i
+.PHONY : source/Initializer/Initialize.cpp.i
 
-source/Mvps/MvpHandle.s: source/Mvps/MvpHandle.cpp.s
+source/Initializer/Initialize.s: source/Initializer/Initialize.cpp.s
 
-.PHONY : source/Mvps/MvpHandle.s
+.PHONY : source/Initializer/Initialize.s
 
 # target to generate assembly for a file
-source/Mvps/MvpHandle.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Mvps/MvpHandle.cpp.s
-.PHONY : source/Mvps/MvpHandle.cpp.s
+source/Initializer/Initialize.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Initializer/Initialize.cpp.s
+.PHONY : source/Initializer/Initialize.cpp.s
+
+source/Mvps/MvpMatrix.o: source/Mvps/MvpMatrix.cpp.o
+
+.PHONY : source/Mvps/MvpMatrix.o
+
+# target to build an object file
+source/Mvps/MvpMatrix.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Mvps/MvpMatrix.cpp.o
+.PHONY : source/Mvps/MvpMatrix.cpp.o
+
+source/Mvps/MvpMatrix.i: source/Mvps/MvpMatrix.cpp.i
+
+.PHONY : source/Mvps/MvpMatrix.i
+
+# target to preprocess a source file
+source/Mvps/MvpMatrix.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Mvps/MvpMatrix.cpp.i
+.PHONY : source/Mvps/MvpMatrix.cpp.i
+
+source/Mvps/MvpMatrix.s: source/Mvps/MvpMatrix.cpp.s
+
+.PHONY : source/Mvps/MvpMatrix.s
+
+# target to generate assembly for a file
+source/Mvps/MvpMatrix.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/source/Mvps/MvpMatrix.cpp.s
+.PHONY : source/Mvps/MvpMatrix.cpp.s
 
 source/Renderer/Renderer.o: source/Renderer/Renderer.cpp.o
 
@@ -735,24 +816,33 @@ help:
 	@echo "... libraries/imgui/imgui_impl_opengl3.o"
 	@echo "... libraries/imgui/imgui_impl_opengl3.i"
 	@echo "... libraries/imgui/imgui_impl_opengl3.s"
+	@echo "... libraries/imgui/imgui_tables.o"
+	@echo "... libraries/imgui/imgui_tables.i"
+	@echo "... libraries/imgui/imgui_tables.s"
 	@echo "... libraries/imgui/imgui_widgets.o"
 	@echo "... libraries/imgui/imgui_widgets.i"
 	@echo "... libraries/imgui/imgui_widgets.s"
 	@echo "... source/Camera/OrthographicCamera.o"
 	@echo "... source/Camera/OrthographicCamera.i"
 	@echo "... source/Camera/OrthographicCamera.s"
+	@echo "... source/Camera/PerspectiveCamera.o"
+	@echo "... source/Camera/PerspectiveCamera.i"
+	@echo "... source/Camera/PerspectiveCamera.s"
+	@echo "... source/Events/Event.o"
+	@echo "... source/Events/Event.i"
+	@echo "... source/Events/Event.s"
 	@echo "... source/ImguiHandle/ImguiHandle.o"
 	@echo "... source/ImguiHandle/ImguiHandle.i"
 	@echo "... source/ImguiHandle/ImguiHandle.s"
 	@echo "... source/IndexBuffers/IndexBuffer.o"
 	@echo "... source/IndexBuffers/IndexBuffer.i"
 	@echo "... source/IndexBuffers/IndexBuffer.s"
-	@echo "... source/Initialize.o"
-	@echo "... source/Initialize.i"
-	@echo "... source/Initialize.s"
-	@echo "... source/Mvps/MvpHandle.o"
-	@echo "... source/Mvps/MvpHandle.i"
-	@echo "... source/Mvps/MvpHandle.s"
+	@echo "... source/Initializer/Initialize.o"
+	@echo "... source/Initializer/Initialize.i"
+	@echo "... source/Initializer/Initialize.s"
+	@echo "... source/Mvps/MvpMatrix.o"
+	@echo "... source/Mvps/MvpMatrix.i"
+	@echo "... source/Mvps/MvpMatrix.s"
 	@echo "... source/Renderer/Renderer.o"
 	@echo "... source/Renderer/Renderer.i"
 	@echo "... source/Renderer/Renderer.s"
