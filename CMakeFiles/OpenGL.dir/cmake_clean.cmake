@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL.dir/libraries/imgui/imgui_widgets.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Camera/OrthographicCamera.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Camera/PerspectiveCamera.cpp.o"
+  "CMakeFiles/OpenGL.dir/source/Core/ExecuteCommands.cpp.o"
   "CMakeFiles/OpenGL.dir/source/Events/Event.cpp.o"
   "CMakeFiles/OpenGL.dir/source/ImguiHandle/ImguiHandle.cpp.o"
   "CMakeFiles/OpenGL.dir/source/IndexBuffers/IndexBuffer.cpp.o"

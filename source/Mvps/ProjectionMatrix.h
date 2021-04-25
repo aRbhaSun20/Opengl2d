@@ -17,7 +17,7 @@ private:
     glm::mat4 m_Projection;
 
 public:
-    ProjectionMatrix(float Zoom = ZOOM_LEVEL, float AspectRatio = ASPECT_RATIO, float zNear = -1.0f, float zFar = 1.0f)
+    ProjectionMatrix(float Zoom = ZOOM_LEVEL, float AspectRatio = ASPECT_RATIO, float zNear = -1.0f, float zFar = 100.0f)
         : m_ZoomLevel(Zoom), m_AspectRatio(AspectRatio), m_Zfar(zFar), m_Znear(zNear)
     {
         m_Projection = glm::perspective(glm::radians(m_ZoomLevel), m_AspectRatio, m_Znear, m_Zfar);

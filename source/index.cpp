@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
       // background color
       glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-      Texture texture("/home/arb/Arb/Proj/Opengl/OpenGl-Demo-Pro/images/Asset.png");
+      Texture texture("/home/arb/Arb/Proj/Opengl/OpenGl2d/images/Asset.png");
       texture.Bind();
 
       shader.SetUniform1i("u_Texture", 0);
